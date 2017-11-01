@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace UnityStandardAssets._2D
 {
@@ -20,6 +21,8 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+        private Transform playerGraphics;   // Refernce to the player graphics to change direction
+
         private void Awake()
         {
             // Setting up references.
@@ -27,6 +30,9 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            playerGraphics = transform.Find("Graphics");
+
+            Assert.IsNotNull(playerGraphics);
         }
 
 
@@ -106,9 +112,9 @@ namespace UnityStandardAssets._2D
             m_FacingRight = !m_FacingRight;
 
             // Multiply the player's x local scale by -1.
-            Vector3 theScale = transform.localScale;
+            Vector3 theScale = playerGraphics.localScale;
             theScale.x *= -1;
-            transform.localScale = theScale;
+            playerGraphics.localScale = theScale;
         }
     }
 }
