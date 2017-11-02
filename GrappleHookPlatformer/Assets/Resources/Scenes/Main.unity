@@ -324,6 +324,55 @@ MonoBehaviour:
   lookAheadFactor: 1.5
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1
+--- !u!1 &1133944497 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1353063678644460, guid: 9db139e2a3220484d8337056754f19ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010828049}
+--- !u!212 &1133944498
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1133944497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!1 &1368413840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,14 +1240,30 @@ Prefab:
     - target: {fileID: 95469872736718186, guid: 9db139e2a3220484d8337056754f19ca,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50588296702658258, guid: 9db139e2a3220484d8337056754f19ca,
         type: 2}
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 58490067602339798, guid: 9db139e2a3220484d8337056754f19ca,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 2bd9f2d640a18294a98965a111bd104b, type: 2}
+    - target: {fileID: 61426749772970722, guid: 9db139e2a3220484d8337056754f19ca,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 2bd9f2d640a18294a98965a111bd104b, type: 2}
+    - target: {fileID: 95469872736718186, guid: 9db139e2a3220484d8337056754f19ca,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 433bdeddf5b647b4c899e0762a0d4930, type: 2}
+    m_RemovedComponents:
+    - {fileID: 212221367558370938, guid: 9db139e2a3220484d8337056754f19ca, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9db139e2a3220484d8337056754f19ca, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2051393815
