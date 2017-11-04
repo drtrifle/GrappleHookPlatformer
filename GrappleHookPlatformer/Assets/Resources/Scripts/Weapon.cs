@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -8,6 +9,11 @@ public class Weapon : MonoBehaviour {
     public float fireRate = 0f;
     public float Damage = 10;
     public LayerMask notToHit;
+
+    //BulletTrail Effect Vars
+    public Transform bulletTrailPrefab;
+    private float timeToSpawnEffect = 0f;
+    public float effectSpawnRate = 10f;
 
     private float timeToFire = 0f;
     private Transform firePoint;
@@ -41,11 +47,21 @@ public class Weapon : MonoBehaviour {
         Vector2 firePointPosition = firePoint.position;
 
         RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePositionV2 - firePointPosition, 100, ~notToHit);
-        Debug.DrawLine(firePointPosition, mousePositionV2);
 
+
+        if(Time.time >= timeToSpawnEffect) {
+            SpawnEffect();
+            timeToSpawnEffect = Time.time + 1 / effectSpawnRate;
+        }
+
+        Debug.DrawLine(firePointPosition, mousePositionV2);
         if(hit.collider != null) {
             Debug.DrawLine(firePointPosition, hit.point, Color.red);
             Debug.Log("Hit " + hit.collider.name + " and did " + Damage + "damage");
         }
+    }
+
+    private void SpawnEffect() {
+        Instantiate(bulletTrailPrefab, firePoint.position, firePoint.rotation);
     }
 }
