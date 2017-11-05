@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -12,6 +11,7 @@ public class Weapon : MonoBehaviour {
 
     //BulletTrail Effect Vars
     public Transform bulletTrailPrefab;
+    public Transform muzzleFlashPrefab;
     private float timeToSpawnEffect = 0f;
     public float effectSpawnRate = 10f;
 
@@ -63,5 +63,10 @@ public class Weapon : MonoBehaviour {
 
     private void SpawnEffect() {
         Instantiate(bulletTrailPrefab, firePoint.position, firePoint.rotation);
+        Transform muzzleFlashClone = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation) as Transform;
+        muzzleFlashClone.parent = firePoint;
+        float size = Random.Range(0.6f, 0.9f);
+        muzzleFlashClone.localScale = new Vector3(size, size, size);
+        Destroy(muzzleFlashClone.gameObject, 0.02f);
     }
 }

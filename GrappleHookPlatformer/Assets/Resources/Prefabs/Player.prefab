@@ -361,6 +361,9 @@ MonoBehaviour:
     m_Bits: 4294966732
   bulletTrailPrefab: {fileID: 4583826621057802, guid: 8e0622255d7f1604f801b3f0fec61fe4,
     type: 2}
+  muzzleFlashPrefab: {fileID: 4237220056954846, guid: 0f23cd9587e98604786bd152ef4f3229,
+    type: 2}
+  effectSpawnRate: 10
 --- !u!212 &212141602968069012
 SpriteRenderer:
   m_ObjectHideFlags: 1
