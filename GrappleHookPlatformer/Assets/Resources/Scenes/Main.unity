@@ -112,6 +112,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &214735973 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1353063678644460, guid: 9db139e2a3220484d8337056754f19ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010828049}
+--- !u!114 &214735974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214735973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801537d93db302b44aa1dd454607f7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats:
+    health: 100
+  fallBoundary: -20
 --- !u!1 &1088532089
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +229,7 @@ MonoBehaviour:
   lookAheadFactor: 1.5
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1
+  yPosRestriction: -1
 --- !u!1 &1368413840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,8 +1164,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2074923037}
   - component: {fileID: 2074923038}
+  - component: {fileID: 2074923039}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1180,3 +1201,14 @@ MonoBehaviour:
   - {fileID: 1843370558}
   - {fileID: 1849591209}
   smoothing: 1
+--- !u!114 &2074923039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074923036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5fb532465c53b4daaf4d37322c1886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
