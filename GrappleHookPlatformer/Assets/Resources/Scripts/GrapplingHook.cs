@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class GrapplingHook : MonoBehaviour {
 
-    public LineRenderer line;
-    DistanceJoint2D joint;
+    private LineRenderer line;
+    private DistanceJoint2D joint;
     Vector3 targetPos;
     RaycastHit2D hit;
     public float distance = 10f;
@@ -17,6 +18,11 @@ public class GrapplingHook : MonoBehaviour {
     // Use this for initialization
     void Start() {
         joint = GetComponent<DistanceJoint2D>();
+        line = GetComponent<LineRenderer>();
+
+        Assert.IsNotNull(joint, "DistanceJoint is null");
+        Assert.IsNotNull(line, "LineRenderer is null");
+
         joint.enabled = false;
         line.enabled = false;
     }
@@ -24,17 +30,17 @@ public class GrapplingHook : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
 
+        //Break rope when distance too small
         if (joint.distance <= .5f) {
-            line.enabled = false;
-            joint.enabled = false;
-            isHooked = false;
+            DisableHook();
         }
 
+        //Update LineRenderer
         if (isHooked) {
             line.SetPosition(0, transform.position);
         }
 
-
+        //Fire GrappleHook
         if (Input.GetButtonDown("Fire1")) {
             targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPos.z = 0;
@@ -57,13 +63,19 @@ public class GrapplingHook : MonoBehaviour {
                 line.SetPosition(0, transform.position);
                 line.SetPosition(1, hit.point);
                 isHooked = true;
-
+            }else {
+                DisableHook();
             }
         }
 
-        if (Input.GetButton("Fire2")) {
-            joint.distance -= step;
-        }
+        //Allow Player to move up/down rope when hooked
+        joint.distance = joint.distance - (step * Input.GetAxis("Vertical"));
 
+    }
+
+    private void DisableHook() {
+        line.enabled = false;
+        joint.enabled = false;
+        isHooked = false;
     }
 }
