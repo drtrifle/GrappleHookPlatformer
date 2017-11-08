@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 1237017478}
   - component: {fileID: 1237017476}
   - component: {fileID: 1237017487}
+  - component: {fileID: 1237017477}
   m_Layer: 8
   m_Name: GrapplePlayer
   m_TagString: Player
@@ -861,6 +862,24 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!232 &1237017477
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237017475}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -6.7, y: 9.1}
+  m_AutoConfigureDistance: 1
+  m_Distance: 9.908264
+  m_MaxDistanceOnly: 0
 --- !u!114 &1237017478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bae4ae0d99f0bd4b8a83ec50b3ff6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hookPrefab: {fileID: 1645659920416306, guid: bc3648dd95909ef4bb27748068eea45d, type: 2}
   distance: 10
   mask:
     serializedVersion: 2
@@ -1007,7 +1027,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -1056,7 +1076,7 @@ SpringJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1237017475}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
@@ -1067,8 +1087,8 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: -20.02, y: 9.46}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
-  m_DampingRatio: 0
-  m_Frequency: 1
+  m_DampingRatio: 0.5
+  m_Frequency: 10
 --- !u!1 &1247884475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1516,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1237017475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.02, y: 9.46, z: 0}
+  m_LocalPosition: {x: -16.14, y: 6.09, z: 0}
   m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 1593283291}

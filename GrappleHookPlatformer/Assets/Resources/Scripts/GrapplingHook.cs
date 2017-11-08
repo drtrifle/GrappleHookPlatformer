@@ -5,8 +5,11 @@ using UnityEngine.Assertions;
 
 public class GrapplingHook : MonoBehaviour {
 
+    public GameObject hookPrefab;
+    private GameObject hookObject;
+
     private LineRenderer line;
-    private SpringJoint2D joint;
+    private DistanceJoint2D joint;
     Vector3 targetPos;
     RaycastHit2D hit;
     public float distance = 10f;
@@ -17,7 +20,7 @@ public class GrapplingHook : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        joint = GetComponent<SpringJoint2D>();
+        joint = GetComponent<DistanceJoint2D>();
         line = GetComponent<LineRenderer>();
 
         Assert.IsNotNull(joint, "DistanceJoint is null");
@@ -38,6 +41,7 @@ public class GrapplingHook : MonoBehaviour {
         //Update LineRenderer
         if (isHooked) {
             line.SetPosition(0, transform.position);
+            line.SetPosition(1, hookObject.transform.position);
         }
 
         //Fire GrappleHook
@@ -53,6 +57,9 @@ public class GrapplingHook : MonoBehaviour {
                 connectPoint.x = connectPoint.x / hit.collider.transform.localScale.x;
                 connectPoint.y = connectPoint.y / hit.collider.transform.localScale.y;
                 Debug.Log(connectPoint);
+
+                hookObject = Instantiate(hookPrefab, new Vector3(hit.point.x, hit.point.y, 0), Quaternion.identity, hit.transform);
+                //joint.connectedAnchor = hookObject.transform.position;
                 joint.connectedAnchor = connectPoint;
 
                 joint.connectedBody = hit.collider.gameObject.GetComponent<Rigidbody2D>();
@@ -61,7 +68,7 @@ public class GrapplingHook : MonoBehaviour {
                 //LineRenderer
                 line.enabled = true;
                 line.SetPosition(0, transform.position);
-                line.SetPosition(1, hit.point);
+                line.SetPosition(1, hookObject.transform.position);
                 isHooked = true;
             }else {
                 DisableHook();
