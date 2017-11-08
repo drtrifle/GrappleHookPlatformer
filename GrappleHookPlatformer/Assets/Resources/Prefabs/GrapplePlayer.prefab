@@ -115,16 +115,17 @@ GameObject:
   m_Component:
   - component: {fileID: 4305234476644068}
   - component: {fileID: 95140344332328322}
+  - component: {fileID: 212544880145840764}
   - component: {fileID: 58393668325871150}
+  - component: {fileID: 61542200263671690}
   - component: {fileID: 50169917672856016}
   - component: {fileID: 114685506367902746}
   - component: {fileID: 114620763465934886}
-  - component: {fileID: 61542200263671690}
-  - component: {fileID: 212544880145840764}
   - component: {fileID: 114802391436864226}
   - component: {fileID: 114895174997849814}
-  - component: {fileID: 232750316344194146}
   - component: {fileID: 120091091292567434}
+  - component: {fileID: 231934839401528268}
+  - component: {fileID: 232656455426333500}
   m_Layer: 8
   m_Name: GrapplePlayer
   m_TagString: Player
@@ -197,7 +198,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1835463836211184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.2, y: 2.1, z: 0}
+  m_LocalPosition: {x: -16.14, y: 2.15, z: 0}
   m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 4044148657777270}
@@ -472,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bae4ae0d99f0bd4b8a83ec50b3ff6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line: {fileID: 120091091292567434}
+  hookPrefab: {fileID: 1645659920416306, guid: bc3648dd95909ef4bb27748068eea45d, type: 2}
   distance: 10
   mask:
     serializedVersion: 2
@@ -786,7 +787,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!232 &232750316344194146
+--- !u!231 &231934839401528268
+SpringJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835463836211184}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -20.02, y: 9.46}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_DampingRatio: 0.5
+  m_Frequency: 10
+--- !u!232 &232656455426333500
 DistanceJoint2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -794,13 +814,13 @@ DistanceJoint2D:
   m_GameObject: {fileID: 1835463836211184}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -6.7, y: 9.1}
   m_AutoConfigureDistance: 1
-  m_Distance: 22.299105
+  m_Distance: 11.722462
   m_MaxDistanceOnly: 1

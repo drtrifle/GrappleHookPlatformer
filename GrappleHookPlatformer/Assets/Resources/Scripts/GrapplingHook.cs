@@ -58,8 +58,12 @@ public class GrapplingHook : MonoBehaviour {
                 connectPoint.y = connectPoint.y / hit.collider.transform.localScale.y;
                 Debug.Log(connectPoint);
 
+                //Destroy hook if alreay exists
+                if (hookObject != null) {
+                    Destroy(hookObject);
+                }
+
                 hookObject = Instantiate(hookPrefab, new Vector3(hit.point.x, hit.point.y, 0), Quaternion.identity, hit.transform);
-                //joint.connectedAnchor = hookObject.transform.position;
                 joint.connectedAnchor = connectPoint;
 
                 joint.connectedBody = hit.collider.gameObject.GetComponent<Rigidbody2D>();
@@ -84,5 +88,10 @@ public class GrapplingHook : MonoBehaviour {
         line.enabled = false;
         joint.enabled = false;
         isHooked = false;
+
+        //Destroy hook if alreay exists
+        if (hookObject != null) {
+            Destroy(hookObject);
+        }
     }
 }
