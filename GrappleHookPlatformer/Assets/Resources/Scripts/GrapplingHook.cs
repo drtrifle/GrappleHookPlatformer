@@ -6,7 +6,7 @@ using UnityEngine.Assertions;
 public class GrapplingHook : MonoBehaviour {
 
     private LineRenderer line;
-    private DistanceJoint2D joint;
+    private SpringJoint2D joint;
     Vector3 targetPos;
     RaycastHit2D hit;
     public float distance = 10f;
@@ -17,7 +17,7 @@ public class GrapplingHook : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        joint = GetComponent<DistanceJoint2D>();
+        joint = GetComponent<SpringJoint2D>();
         line = GetComponent<LineRenderer>();
 
         Assert.IsNotNull(joint, "DistanceJoint is null");
