@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
     public float speed = 1f;
     public float jumpSpeed = 3f;
     public bool isSwinging;
@@ -19,22 +18,21 @@ public class PlayerMovement : MonoBehaviour
     public float swingForce = 4f;
 
     // Vars to Check if Player is on ground
-    [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+    [SerializeField]
+    private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
     private Transform m_GroundCheck;                                    // A position marking where to check if the player is grounded.
     const float k_GroundedRadius = .2f;                                 // Radius of the overlap circle to determine if grounded
     public bool groundCheck;
 
 
-    void Awake()
-    {
+    void Awake() {
         playerSprite = GetComponent<SpriteRenderer>();
         rBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         m_GroundCheck = transform.Find("GroundCheck");
     }
 
-    void Update()
-    {
+    void Update() {
         jumpInput = Input.GetAxis("Jump");
         horizontalInput = Input.GetAxis("Horizontal");
         var halfHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
@@ -47,8 +45,6 @@ public class PlayerMovement : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
                 groundCheck = true;
         }
-        //groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight - 0.04f), Vector2.down, 0.025f);
-        Debug.Log(groundCheck);
     }
 
     void FixedUpdate() {
@@ -86,6 +82,12 @@ public class PlayerMovement : MonoBehaviour
         } else {
             //animator.SetBool("IsSwinging", false);
             //animator.SetFloat("Speed", 0f);
+
+            //Makes Player Stop horizontaly when not swinging
+            if (!isSwinging) {
+                rBody.velocity = new Vector2(0, rBody.velocity.y);
+            }
+
         }
 
         if (!isSwinging) {
