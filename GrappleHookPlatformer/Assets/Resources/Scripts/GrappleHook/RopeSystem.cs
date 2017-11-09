@@ -10,24 +10,24 @@ public class RopeSystem : MonoBehaviour {
     public SpriteRenderer crosshairSprite;
     public PlayerMovement playerMovement;
     private bool ropeAttached;
-    private Vector2 playerPosition;                                    //Stores player's world coords
+    private Vector2 playerPosition;                                    // Stores player's world coords
 
-    //RopeHingeAnchor Vars
+    // RopeHingeAnchor Vars
     public GameObject ropeHingeAnchor;
     private Rigidbody2D ropeHingeAnchorRb;
     private SpriteRenderer ropeHingeAnchorSprite;
 
-    //RayCast vars 
+    // RayCast vars 
     public LineRenderer ropeRenderer;
     public LayerMask ropeLayerMask;
     private float ropeMaxCastDistance = 20f;
-    private List<Vector2> ropePositions = new List<Vector2>();         //Contains all rope positions for wrapping around objects
+    private List<Vector2> ropePositions = new List<Vector2>();         // Contains all rope positions for wrapping around objects
 
-    private bool distanceSet;                                          // flag to let the script know that the rope's distance has been set correctly
+    private bool distanceSet;                                          // Flag to let the script know that the rope's distance has been set correctly
 
-    private Dictionary<Vector2, int> wrapPointsLookup = new Dictionary<Vector2, int>();   //Stores all points of polygon collider that hook is curently attached to
+    private Dictionary<Vector2, int> wrapPointsLookup = new Dictionary<Vector2, int>();   // Stores all points of polygon collider that hook is curently attached to
 
-    //Rappeling Vars
+    // Rappeling Vars
     public float climbSpeed = 3f;
     private bool isColliding;
 
@@ -99,14 +99,14 @@ public class RopeSystem : MonoBehaviour {
         HandleRopeLength();
     }
 
-    //Set the crosshair sprite 1 unit in between player & cursor
+    //Set the crosshair sprite 1.5 units in between player & cursor
     private void SetCrosshairPosition(float aimAngle) {
         if (!crosshairSprite.enabled) {
             crosshairSprite.enabled = true;
         }
 
-        var x = transform.position.x + 1f * Mathf.Cos(aimAngle);
-        var y = transform.position.y + 1f * Mathf.Sin(aimAngle);
+        var x = transform.position.x + 1.5f * Mathf.Cos(aimAngle);
+        var y = transform.position.y + 1.5f * Mathf.Sin(aimAngle);
 
         var crossHairPosition = new Vector3(x, y, 0);
         crosshair.transform.position = crossHairPosition;

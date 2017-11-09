@@ -35,4 +35,8 @@ public class GameMaster : MonoBehaviour {
         gameMaster.StartCoroutine(gameMaster.RespawnPlayer());
     }
 
+    public static void WinLevel() {
+
+    }
+
 }
