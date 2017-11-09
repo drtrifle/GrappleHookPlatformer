@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Vars to Check if Player is on ground
     [SerializeField]
-    private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+    private LayerMask m_WhatIsGround;                                   // A mask determining what is ground to the character
     private Transform m_GroundCheck;                                    // A position marking where to check if the player is grounded.
     const float k_GroundedRadius = .2f;                                 // Radius of the overlap circle to determine if grounded
     public bool groundCheck;
@@ -73,11 +73,12 @@ public class PlayerMovement : MonoBehaviour {
                 rBody.AddForce(force, ForceMode2D.Force);
             } else {
                 //animator.SetBool("IsSwinging", false);
-                if (groundCheck) {
-                    var groundForce = speed * 2f;
-                    rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
-                    rBody.velocity = new Vector2(rBody.velocity.x, rBody.velocity.y);
-                }
+
+                // Player GroundMovement
+                var groundForce = speed * 2f;
+                rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
+                rBody.velocity = new Vector2(rBody.velocity.x, rBody.velocity.y);
+
             }
         } else {
             //animator.SetBool("IsSwinging", false);
