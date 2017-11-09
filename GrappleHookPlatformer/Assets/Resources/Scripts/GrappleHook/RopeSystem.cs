@@ -8,7 +8,7 @@ public class RopeSystem : MonoBehaviour {
     public DistanceJoint2D ropeJoint;
     public Transform crosshair;
     public SpriteRenderer crosshairSprite;
-    //public PlayerMovement playerMovement;
+    public PlayerMovement playerMovement;
     private bool ropeAttached;
     private Vector2 playerPosition;                                    //Stores player's world coords
 
@@ -26,6 +26,10 @@ public class RopeSystem : MonoBehaviour {
     private bool distanceSet;                                          // flag to let the script know that the rope's distance has been set correctly
 
     private Dictionary<Vector2, int> wrapPointsLookup = new Dictionary<Vector2, int>();   //Stores all points of polygon collider that hook is curently attached to
+
+    //Rappeling Vars
+    public float climbSpeed = 3f;
+    private bool isColliding;
 
     void Awake() {
         ropeJoint.enabled = false;
@@ -51,8 +55,13 @@ public class RopeSystem : MonoBehaviour {
 
         //Determine if the rope is attached to an anchor point
         if (!ropeAttached) {
+            playerMovement.isSwinging = false;
+
             SetCrosshairPosition(aimAngle);
         } else {
+            playerMovement.isSwinging = true;
+            playerMovement.ropeHook = ropePositions.Last();
+
             crosshairSprite.enabled = false;
 
             //Check if ropePositions list has any positions stored
@@ -87,6 +96,7 @@ public class RopeSystem : MonoBehaviour {
 
         HandleInput(aimDirection);
         UpdateRopePositions();
+        HandleRopeLength();
     }
 
     //Set the crosshair sprite 1 unit in between player & cursor
@@ -143,7 +153,7 @@ public class RopeSystem : MonoBehaviour {
     private void ResetRope() {
         ropeJoint.enabled = false;
         ropeAttached = false;
-        //playerMovement.isSwinging = false;
+        playerMovement.isSwinging = false;
         ropeRenderer.positionCount = 2;
         ropeRenderer.SetPosition(0, transform.position);
         ropeRenderer.SetPosition(1, transform.position);
@@ -212,5 +222,22 @@ public class RopeSystem : MonoBehaviour {
         //Dictionary ordered by distance closest to the player's current position, and the closest one is returned
         var orderedDictionary = distanceDictionary.OrderBy(e => e.Key);
         return orderedDictionary.Any() ? orderedDictionary.First().Value : Vector2.zero;
+    }
+
+    //Shortens/Lengthens Rope Length depending on player input
+    private void HandleRopeLength() {
+        if (Input.GetAxis("Vertical") >= 1f && ropeAttached && !isColliding) {
+            ropeJoint.distance -= Time.deltaTime * climbSpeed;
+        } else if (Input.GetAxis("Vertical") < 0f && ropeAttached) {
+            ropeJoint.distance += Time.deltaTime * climbSpeed;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D colliderStay) {
+        isColliding = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D colliderOnExit) {
+        isColliding = false;
     }
 }
