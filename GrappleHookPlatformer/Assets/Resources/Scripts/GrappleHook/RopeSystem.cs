@@ -39,17 +39,12 @@ public class RopeSystem : MonoBehaviour {
     }
 
     void Update() {
-        //Calculate the angle from the player to the cursor as a radian
-        var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
-        var facingDirection = worldMousePosition - transform.position;
-        var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
-        if (aimAngle < 0f) {
-            aimAngle = Mathf.PI * 2 + aimAngle;
-        }
+
+        float aimAngle = CalculateAimAngle();
 
         // Convert angle from player to cursor to degrees. This will be used later for Raycasting from plyer to cursor
-        var aimDirection = Quaternion.Euler(0, 0, aimAngle * Mathf.Rad2Deg) * Vector2.right;
-        
+        Vector2 aimDirection = Quaternion.Euler(0, 0, aimAngle * Mathf.Rad2Deg) * Vector2.right;
+
         //keep tracking player world coords
         playerPosition = transform.position;
 
@@ -64,39 +59,72 @@ public class RopeSystem : MonoBehaviour {
 
             crosshairSprite.enabled = false;
 
-            //Check if ropePositions list has any positions stored
-            if (ropePositions.Count > 0) {
-                // Fire a raycast out from the player's position, in the direction of the player looking at the last rope position in the list 
-                var lastRopePoint = ropePositions.Last();
-                var playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, Vector2.Distance(playerPosition, lastRopePoint) - 0.1f, ropeLayerMask);
+            HandleRopeWrapping();
+        }
 
-                // If the raycast hits something, then that hit object's collider is safe cast to a PolygonCollider2D. 
-                // As long as it's a real PolygonCollider2D, then the closest vertex position on that collider is returned as a Vector2, 
-                if (playerToCurrentNextHit) {
-                    var colliderWithVertices = playerToCurrentNextHit.collider as PolygonCollider2D;
-                    if (colliderWithVertices != null) {
-                        var closestPointToHit = GetClosestColliderPointFromRaycastHit(playerToCurrentNextHit, colliderWithVertices);
+        HandlePlayerInput(aimDirection);
+        UpdateRopePositions();
+        HandleRopeLength();
+    }
 
-                        // The wrapPointsLookup is checked to make sure the same position is not being wrapped again.
-                        // If it is, then it'll reset the rope and cut it, dropping the player.
-                        if (wrapPointsLookup.ContainsKey(closestPointToHit)) {
-                            ResetRope();
-                            return;
-                        }
+    #region Rope Wrapping Methods
 
-                        // The wrapPointsLookup dictionar and ropePositions list is now updated, adding the position the rope should wrap around
-                        // DistanceSet flag is disabled, so that UpdateRopePositions() method can re-configure the rope's distances to take into account the new rope length and segments.
-                        ropePositions.Add(closestPointToHit);
-                        wrapPointsLookup.Add(closestPointToHit, 0);
-                        distanceSet = false;
+    //Wraps Rope around edges of polygoncolliders that touch the rope
+    private void HandleRopeWrapping() {
+        //Check if ropePositions list has any positions stored
+        if (ropePositions.Count > 0) {
+            // Fire a raycast out from the player's position, in the direction of the player looking at the last rope position in the list 
+            var lastRopePoint = ropePositions.Last();
+            var playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, Vector2.Distance(playerPosition, lastRopePoint) - 0.1f, ropeLayerMask);
+
+            // If the raycast hits something, then that hit object's collider is safe cast to a PolygonCollider2D. 
+            // As long as it's a real PolygonCollider2D, then the closest vertex position on that collider is returned as a Vector2, 
+            if (playerToCurrentNextHit) {
+                var colliderWithVertices = playerToCurrentNextHit.collider as PolygonCollider2D;
+                if (colliderWithVertices != null) {
+                    var closestPointToHit = GetClosestColliderPointFromRaycastHit(playerToCurrentNextHit, colliderWithVertices);
+
+                    // The wrapPointsLookup is checked to make sure the same position is not being wrapped again.
+                    // If it is, then it'll reset the rope and cut it, dropping the player.
+                    if (wrapPointsLookup.ContainsKey(closestPointToHit)) {
+                        ResetRope();
+                        return;
                     }
+
+                    // The wrapPointsLookup dictionar and ropePositions list is now updated, adding the position the rope should wrap around
+                    // DistanceSet flag is disabled, so that UpdateRopePositions() method can re-configure the rope's distances to take into account the new rope length and segments.
+                    ropePositions.Add(closestPointToHit);
+                    wrapPointsLookup.Add(closestPointToHit, 0);
+                    distanceSet = false;
                 }
             }
         }
+    }
 
-        HandleInput(aimDirection);
-        UpdateRopePositions();
-        HandleRopeLength();
+    //WARNING: Requires all objects to be hooked to have a polygon collider
+    private Vector2 GetClosestColliderPointFromRaycastHit(RaycastHit2D hit, PolygonCollider2D polyCollider) {
+        //Converts the polygon collider's collection of points, into a dictionary of Vector2 positions 
+        //The key of each entry, is set to the distance that this point is to the player's position 
+        var distanceDictionary = polyCollider.points.ToDictionary<Vector2, float, Vector2>(
+            position => Vector2.Distance(hit.point, polyCollider.transform.TransformPoint(position)),
+            position => polyCollider.transform.TransformPoint(position));
+
+        //Dictionary ordered by distance closest to the player's current position, and the closest one is returned
+        var orderedDictionary = distanceDictionary.OrderBy(e => e.Key);
+        return orderedDictionary.Any() ? orderedDictionary.First().Value : Vector2.zero;
+    }
+
+    # endregion
+
+    //Returns the angle from the player to the cursor as a radian
+    private float CalculateAimAngle() {
+        var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
+        var facingDirection = worldMousePosition - transform.position;
+        var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
+        if (aimAngle < 0f) {
+            aimAngle = Mathf.PI * 2 + aimAngle;
+        }
+        return aimAngle;
     }
 
     //Set the crosshair sprite 1.5 units in between player & cursor
@@ -113,39 +141,44 @@ public class RopeSystem : MonoBehaviour {
     }
 
     //Handle Input from player playing game
-    private void HandleInput(Vector2 aimDirection) {
+    private void HandlePlayerInput(Vector2 aimDirection) {
         //On Player Left Click
         if (Input.GetMouseButton(0)) {
-            // Ignore if rope already attached
-            if (ropeAttached) return;
-            ropeRenderer.enabled = true;
-
-            var hit = Physics2D.Raycast(playerPosition, aimDirection, ropeMaxCastDistance, ropeLayerMask);
-
-            // Raycast hit something
-            if (hit.collider != null) {
-                ropeAttached = true;
-                //Check if raycast hit position is new
-                if (!ropePositions.Contains(hit.point)) {
-                    // Jump slightly to distance the player a little from the ground after grappling to something.
-                    transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impulse);
-                    ropePositions.Add(hit.point);
-                    ropeJoint.distance = Vector2.Distance(playerPosition, hit.point);
-                    ropeJoint.enabled = true;
-                    ropeHingeAnchorSprite.enabled = true;
-                }
-            }
-            // Disable Rope Vars & Visuals
-            else {
-                ropeRenderer.enabled = false;
-                ropeAttached = false;
-                ropeJoint.enabled = false;
-            }
+            ShootGrapple(aimDirection);
         }
 
-        //On Player Left Click
+        //On Player Right Click
         if (Input.GetMouseButton(1)) {
             ResetRope();
+        }
+    }
+
+    //Fire Grapple Hook at player mouse cursor direction
+    private void ShootGrapple(Vector2 aimDirection) {
+        // Ignore if rope already attached
+        if (ropeAttached) return;
+        ropeRenderer.enabled = true;
+
+        var hit = Physics2D.Raycast(playerPosition, aimDirection, ropeMaxCastDistance, ropeLayerMask);
+
+        // Raycast hit something
+        if (hit.collider != null) {
+            ropeAttached = true;
+            //Check if raycast hit position is new
+            if (!ropePositions.Contains(hit.point)) {
+                // Jump slightly to distance the player a little from the ground after grappling to something.
+                transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impulse);
+                ropePositions.Add(hit.point);
+                ropeJoint.distance = Vector2.Distance(playerPosition, hit.point);
+                ropeJoint.enabled = true;
+                ropeHingeAnchorSprite.enabled = true;
+            }
+        }
+        // Disable Rope Vars & Visuals
+        else {
+            ropeRenderer.enabled = false;
+            ropeAttached = false;
+            ropeJoint.enabled = false;
         }
     }
 
@@ -211,19 +244,6 @@ public class RopeSystem : MonoBehaviour {
         }
     }
 
-    //WARNING: Requires all objects to be hooked to have a polygon collider
-    private Vector2 GetClosestColliderPointFromRaycastHit(RaycastHit2D hit, PolygonCollider2D polyCollider) {
-        //Converts the polygon collider's collection of points, into a dictionary of Vector2 positions 
-        //The key of each entry, is set to the distance that this point is to the player's position 
-        var distanceDictionary = polyCollider.points.ToDictionary<Vector2, float, Vector2>(
-            position => Vector2.Distance(hit.point, polyCollider.transform.TransformPoint(position)),
-            position => polyCollider.transform.TransformPoint(position));
-
-        //Dictionary ordered by distance closest to the player's current position, and the closest one is returned
-        var orderedDictionary = distanceDictionary.OrderBy(e => e.Key);
-        return orderedDictionary.Any() ? orderedDictionary.First().Value : Vector2.zero;
-    }
-
     //Shortens/Lengthens Rope Length depending on player input
     private void HandleRopeLength() {
         if (Input.GetAxis("Vertical") >= 1f && ropeAttached && !isColliding) {
@@ -233,6 +253,8 @@ public class RopeSystem : MonoBehaviour {
         }
     }
 
+    #region Collision Checking Methods
+
     void OnTriggerStay2D(Collider2D colliderStay) {
         isColliding = true;
     }
@@ -240,4 +262,8 @@ public class RopeSystem : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D colliderOnExit) {
         isColliding = false;
     }
+
+    #endregion
+
+
 }
