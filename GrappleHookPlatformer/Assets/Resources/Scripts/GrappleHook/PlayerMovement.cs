@@ -11,18 +11,17 @@ public class PlayerMovement : MonoBehaviour {
     private bool isJumping;
     private Animator animator;
     private float jumpInput;
-    private float horizontalInput;
 
     //Rope Swing ability vars
     public Vector2 ropeHook;
     public float swingForce = 4f;
 
-    // Vars to Check if Player is on ground
+    // Vars to Check if Player is on the ground
     [SerializeField]
     private LayerMask m_WhatIsGround;                                   // A mask determining what is ground to the character
     private Transform m_GroundCheck;                                    // A position marking where to check if the player is grounded.
     const float k_GroundedRadius = .2f;                                 // Radius of the overlap circle to determine if grounded
-    public bool groundCheck;
+    public bool isPlayerGrounded;
 
 
     void Awake() {
@@ -32,72 +31,99 @@ public class PlayerMovement : MonoBehaviour {
         m_GroundCheck = transform.Find("GroundCheck");
     }
 
-    void Update() {
-        jumpInput = Input.GetAxis("Jump");
-        horizontalInput = Input.GetAxis("Horizontal");
-        var halfHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
-
-        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
-        // This can be done using layers instead but Sample Assets will not overwrite your project settings.
-        groundCheck = false;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-        for (int i = 0; i < colliders.Length; i++) {
-            if (colliders[i].gameObject != gameObject)
-                groundCheck = true;
-        }
+    void FixedUpdate() {
+        CheckIfPlayerGrounded();
+        HandleHorizontalInput();
+        HandleVerticalInput();
     }
 
-    void FixedUpdate() {
-        if (horizontalInput < 0f || horizontalInput > 0f) {
+    #region Vertical Movement Methods
+    private void HandleVerticalInput() {
+        jumpInput = Input.GetAxis("Jump");
+
+        // Don't Jump if player swinging or in the air already
+        if (isSwinging || !isPlayerGrounded) {
+            return;
+        }
+
+        if (jumpInput > 0f) {
+            rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed);
+        }
+
+    }
+
+    #endregion
+
+    #region Horizontal Movement Methods
+
+    private void HandleHorizontalInput() {
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        if (horizontalInput != 0f) {
             //animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
             playerSprite.flipX = horizontalInput < 0f;
             if (isSwinging) {
-                //animator.SetBool("IsSwinging", true);
-
-                // 1 - Get a normalized direction vector from the player to the hook point
-                var playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
-
-                // 2 - Inverse the direction to get a perpendicular direction
-                Vector2 perpendicularDirection;
-                if (horizontalInput < 0) {
-                    perpendicularDirection = new Vector2(-playerToHookDirection.y, playerToHookDirection.x);
-                    var leftPerpPos = (Vector2)transform.position - perpendicularDirection * -2f;
-                    Debug.DrawLine(transform.position, leftPerpPos, Color.green, 0f);
-                } else {
-                    perpendicularDirection = new Vector2(playerToHookDirection.y, -playerToHookDirection.x);
-                    var rightPerpPos = (Vector2)transform.position + perpendicularDirection * 2f;
-                    Debug.DrawLine(transform.position, rightPerpPos, Color.green, 0f);
-                }
-
-                var force = perpendicularDirection * swingForce;
-                rBody.AddForce(force, ForceMode2D.Force);
+                HandleSwinging(horizontalInput);
             } else {
                 //animator.SetBool("IsSwinging", false);
-
-                // Player GroundMovement
-                var groundForce = speed * 2f;
-                rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
-                rBody.velocity = new Vector2(rBody.velocity.x, rBody.velocity.y);
-
+                HandleGroundMovement(horizontalInput);
             }
         } else {
             //animator.SetBool("IsSwinging", false);
             //animator.SetFloat("Speed", 0f);
 
-            //Makes Player Stop horizontaly when not swinging
+            //Makes Player Stop horizontaly when not swinging & when no player horizontal input
             if (!isSwinging) {
                 rBody.velocity = new Vector2(0, rBody.velocity.y);
             }
 
         }
+    }
 
-        if (!isSwinging) {
-            if (!groundCheck) return;
+    //Handles Movement When Player is attached to rope
+    private void HandleSwinging(float horizontalInput) {
+        //animator.SetBool("IsSwinging", true);
 
-            isJumping = jumpInput > 0f;
-            if (isJumping) {
-                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed);
+        // 1 - Get a normalized direction vector from the player to the hook point
+        Vector2 playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
+
+        // 2 - Inverse the direction to get a perpendicular direction
+        Vector2 perpendicularDirection;
+        if (horizontalInput < 0) {
+            perpendicularDirection = new Vector2(-playerToHookDirection.y, playerToHookDirection.x);
+            Vector2 leftPerpPos = (Vector2)transform.position - perpendicularDirection * -2f;
+            Debug.DrawLine(transform.position, leftPerpPos, Color.green, 0f);
+        } else {
+            perpendicularDirection = new Vector2(playerToHookDirection.y, -playerToHookDirection.x);
+            Vector2 rightPerpPos = (Vector2)transform.position + perpendicularDirection * 2f;
+            Debug.DrawLine(transform.position, rightPerpPos, Color.green, 0f);
+        }
+
+        Vector2 swingForce = perpendicularDirection * this.swingForce;
+        rBody.AddForce(swingForce, ForceMode2D.Force);
+    }
+
+    //Handles Movement When Player is on the ground
+    private void HandleGroundMovement(float horizontalInput) {
+        // Player GroundMovement
+        var groundForce = speed * 2f;
+        rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
+        rBody.velocity = new Vector2(rBody.velocity.x, rBody.velocity.y);
+    }
+
+    #endregion
+
+    //Checks if Player is touching the ground
+    private void CheckIfPlayerGrounded() {
+        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        for (int i = 0; i < colliders.Length; i++) {
+            if (colliders[i].gameObject != gameObject) {
+                isPlayerGrounded = true;
+                return;
             }
         }
+
+        isPlayerGrounded = false;
     }
 }
