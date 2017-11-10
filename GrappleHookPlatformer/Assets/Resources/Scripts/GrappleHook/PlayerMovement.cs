@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour {
     public bool isSwinging;
     private SpriteRenderer playerSprite;
     private Rigidbody2D rBody;
-    private bool isJumping;
     private Animator animator;
     private float jumpInput;
 
@@ -62,7 +61,7 @@ public class PlayerMovement : MonoBehaviour {
         if (horizontalInput != 0f) {
             //animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
             playerSprite.flipX = horizontalInput < 0f;
-            if (isSwinging) {
+            if (isSwinging && !isPlayerGrounded) {
                 HandleSwinging(horizontalInput);
             } else {
                 //animator.SetBool("IsSwinging", false);

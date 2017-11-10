@@ -9,7 +9,7 @@ public class GameMaster : MonoBehaviour {
     private void Start() {
         if(gameMaster == null) {
             gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-        }
+        } 
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -19,6 +19,7 @@ public class GameMaster : MonoBehaviour {
     public Transform spawnPoint;
     public int spawnDelay = 2;
     public GameObject spawnPrefab; //Prefab of particle effects when player spawns
+    public GameObject levelClearedText;
     AudioSource audioSource;
 
     public IEnumerator RespawnPlayer() {
@@ -35,8 +36,8 @@ public class GameMaster : MonoBehaviour {
         gameMaster.StartCoroutine(gameMaster.RespawnPlayer());
     }
 
-    public static void WinLevel() {
-
+    public void WinLevel() {
+        levelClearedText.SetActive(true);
     }
 
 }

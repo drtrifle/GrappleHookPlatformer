@@ -6,7 +6,7 @@ public class Exit : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D otherCollider) {
         if (otherCollider.CompareTag("Player")) {
-            GameMaster.WinLevel();
+            GameMaster.gameMaster.WinLevel(); 
         }
     }
 }
