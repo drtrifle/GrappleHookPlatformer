@@ -413,7 +413,7 @@ BoxCollider2D:
 Transform:
   m_PrefabParentObject: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
     type: 2}
-  m_PrefabInternal: {fileID: 907852918}
+  m_PrefabInternal: {fileID: 716430766}
 --- !u!1 &249071102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2303,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &716430766
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &761779675
 Prefab:
   m_ObjectHideFlags: 0
@@ -2449,64 +2491,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1001 &907852918
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114550099431731108, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
-        type: 2}
-      propertyPath: swingForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 212587741049389426, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e3f5bb5077b90ea459055115e5aa3463,
-        type: 3}
-    - target: {fileID: 114550099431731108, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
-        type: 2}
-      propertyPath: jumpSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &926800775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,7 +5303,7 @@ GameObject:
   - component: {fileID: 2037478465}
   m_Layer: 0
   m_Name: boxCrate_double
-  m_TagString: Untagged
+  m_TagString: GrappleObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5335,7 +5319,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -5513,7 +5497,7 @@ GameObject:
   - component: {fileID: 2097236153}
   m_Layer: 0
   m_Name: boxCrate_double (1)
-  m_TagString: Untagged
+  m_TagString: GrappleObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5529,7 +5513,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
