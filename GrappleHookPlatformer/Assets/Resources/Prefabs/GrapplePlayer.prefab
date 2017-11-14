@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  jumpSpeed: 10
+  jumpSpeed: 12
   isSwinging: 0
   ropeHook: {x: 0, y: 0}
   swingForce: 10

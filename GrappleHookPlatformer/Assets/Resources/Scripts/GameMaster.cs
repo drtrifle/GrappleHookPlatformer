@@ -20,6 +20,7 @@ public class GameMaster : MonoBehaviour {
     public int spawnDelay = 2;
     public GameObject spawnPrefab; //Prefab of particle effects when player spawns
     public GameObject levelClearedText;
+    private bool isPlayerRespawning = false;
     AudioSource audioSource;
 
     public IEnumerator RespawnPlayer() {
@@ -28,12 +29,16 @@ public class GameMaster : MonoBehaviour {
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         GameObject particleClone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation);
         Destroy(particleClone, 3f);
-
+        isPlayerRespawning = false;
     }
 
     public static void KillPlayer(Player player) {
-        Destroy(player.gameObject);
-        gameMaster.StartCoroutine(gameMaster.RespawnPlayer());
+        GameMaster gm = GameMaster.gameMaster;
+        if (!gm.isPlayerRespawning) {
+            Destroy(player.gameObject);
+            gameMaster.StartCoroutine(gameMaster.RespawnPlayer());
+            gm.isPlayerRespawning = true;
+        }
     }
 
     public void WinLevel() {
