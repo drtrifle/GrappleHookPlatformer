@@ -41,11 +41,12 @@ public class PlayerMovement : MonoBehaviour {
         jumpInput = Input.GetAxis("Jump");
 
         // Don't Jump if player swinging or in the air already
-        if (isSwinging || !isPlayerGrounded) {
+        if (!isPlayerGrounded) {
             return;
         }
 
         if (jumpInput > 0f) {
+            animator.SetBool("Ground", false);
             rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed);
         }
 
@@ -59,7 +60,7 @@ public class PlayerMovement : MonoBehaviour {
         float horizontalInput = Input.GetAxis("Horizontal");
 
         if (horizontalInput != 0f) {
-            //animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+            animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
             playerSprite.flipX = horizontalInput < 0f;
             if (isSwinging && !isPlayerGrounded) {
                 HandleSwinging(horizontalInput);
@@ -118,6 +119,7 @@ public class PlayerMovement : MonoBehaviour {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++) {
             if (colliders[i].gameObject != gameObject) {
+                animator.SetBool("Ground", true);
                 isPlayerGrounded = true;
                 return;
             }

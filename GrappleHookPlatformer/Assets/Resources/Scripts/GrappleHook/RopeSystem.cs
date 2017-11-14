@@ -17,6 +17,8 @@ public class RopeSystem : MonoBehaviour {
     private Rigidbody2D ropeHingeAnchorRb;
     private SpriteRenderer ropeHingeAnchorSprite;
 
+    private Rigidbody2D grappleObjectRb;
+
     // RayCast vars 
     public LineRenderer ropeRenderer;
     public LayerMask ropeLayerMask;
@@ -53,14 +55,13 @@ public class RopeSystem : MonoBehaviour {
 
         //Determine if the rope is attached to an anchor point
         if (ropeAttached) {
-            playerMovement.isSwinging = true;
             crosshairSprite.enabled = false;
 
             switch (currentlyAttachedTag) {
                 case ("Terrain"):
+                    playerMovement.isSwinging = true;
                     playerMovement.ropeHook = ropePositions.Last();
                     HandleRopeWrapping();
-                    UpdateRopePositions();
                     break;
                 case ("GrappleObject"):
                     break;
@@ -72,6 +73,7 @@ public class RopeSystem : MonoBehaviour {
             SetCrosshairPosition(aimAngle);
         }
 
+        UpdateRopePositions();
         HandlePlayerInput(aimDirection);
         HandleRopeLength();
     }
@@ -117,46 +119,56 @@ public class RopeSystem : MonoBehaviour {
             return;
         }
 
-        //Count number of vertexs(including player)
-        ropeRenderer.positionCount = ropePositions.Count + 1;
+        switch (currentlyAttachedTag) {
+            case ("Terrain"):
+                //Count number of vertexs(including player)
+                ropeRenderer.positionCount = ropePositions.Count + 1;
 
-        //Set LineRenderer positions to be same as list of rope positions
-        for (var i = ropeRenderer.positionCount - 1; i >= 0; i--) {
-            if (i != ropeRenderer.positionCount - 1) // if not the Last point of line renderer
-            {
-                ropeRenderer.SetPosition(i, ropePositions[i]);
+                //Set LineRenderer positions to be same as list of rope positions
+                for (var i = ropeRenderer.positionCount - 1; i >= 0; i--) {
+                    if (i != ropeRenderer.positionCount - 1) // if not the Last point of line renderer
+                    {
+                        ropeRenderer.SetPosition(i, ropePositions[i]);
 
-                //Set the rope anchor to the second-to-last rope position where the current hinge/anchor should be
-                if (i == ropePositions.Count - 1 || ropePositions.Count == 1) {
-                    var ropePosition = ropePositions[ropePositions.Count - 1];
-                    if (ropePositions.Count == 1) {
-                        ropeHingeAnchorRb.transform.position = ropePosition;
-                        if (!distanceSet) {
-                            ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
-                            distanceSet = true;
+                        //Set the rope anchor to the second-to-last rope position where the current hinge/anchor should be
+                        if (i == ropePositions.Count - 1 || ropePositions.Count == 1) {
+                            var ropePosition = ropePositions[ropePositions.Count - 1];
+                            if (ropePositions.Count == 1) {
+                                ropeHingeAnchorRb.transform.position = ropePosition;
+                                if (!distanceSet) {
+                                    ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                                    distanceSet = true;
+                                }
+                            } else {
+                                ropeHingeAnchorRb.transform.position = ropePosition;
+                                if (!distanceSet) {
+                                    ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                                    distanceSet = true;
+                                }
+                            }
+                        }
+                        //Rope position being looped over is the second-to-last one
+                        else if (i - 1 == ropePositions.IndexOf(ropePositions.Last())) {
+                            var ropePosition = ropePositions.Last();
+                            ropeHingeAnchorRb.transform.position = ropePosition;
+                            if (!distanceSet) {
+                                ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                                distanceSet = true;
+                            }
                         }
                     } else {
-                        ropeHingeAnchorRb.transform.position = ropePosition;
-                        if (!distanceSet) {
-                            ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
-                            distanceSet = true;
-                        }
+                        //Set the rope's last vertex position to the player's current position.
+                        ropeRenderer.SetPosition(i, transform.position);
                     }
                 }
-                //Rope position being looped over is the second-to-last one
-                else if (i - 1 == ropePositions.IndexOf(ropePositions.Last())) {
-                    var ropePosition = ropePositions.Last();
-                    ropeHingeAnchorRb.transform.position = ropePosition;
-                    if (!distanceSet) {
-                        ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
-                        distanceSet = true;
-                    }
-                }
-            } else {
-                //Set the rope's last vertex position to the player's current position.
-                ropeRenderer.SetPosition(i, transform.position);
-            }
+                break;
+            case ("GrappleObject"):
+                ropeRenderer.SetPosition(0, transform.position);
+                ropeRenderer.SetPosition(1, grappleObjectRb.transform.position);
+                break;
         }
+
+        
     }
 
     //WARNING: Requires all objects to be hooked to have a polygon collider
@@ -233,19 +245,23 @@ public class RopeSystem : MonoBehaviour {
                         // Jump slightly to distance the player a little from the ground after grappling to something.
                         transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impulse);
                         ropePositions.Add(hit.point);
+                        ropeJoint.connectedBody = ropeHingeAnchorRb;
                         ropeJoint.distance = Vector2.Distance(playerPosition, hit.point);
                         ropeJoint.enabled = true;
                         ropeHingeAnchorSprite.enabled = true;
                     }
                     break;
                 case ("GrappleObject"):
+                    ropeAttached = true;
+
                     ropeHingeAnchor.transform.position = hit.point;
                     ropeHingeAnchor.transform.parent = hit.collider.transform;
-                    ropeJoint.distance = Vector2.Distance(playerPosition, hit.point);
+                    grappleObjectRb = hit.collider.GetComponent<Rigidbody2D>();
+                    ropeJoint.connectedBody = grappleObjectRb;
+                    ropeJoint.distance = Vector2.Distance(playerPosition, hit.collider.transform.position);
                     ropeJoint.enabled = true;
-                    ropeHingeAnchorSprite.enabled = true;
+                    //ropeHingeAnchorSprite.enabled = true;
                     break;
-
             }
             
         }
@@ -268,6 +284,7 @@ public class RopeSystem : MonoBehaviour {
         ropePositions.Clear();
         ropeHingeAnchorSprite.enabled = false;
         wrapPointsLookup.Clear();
+        currentlyAttachedTag = "None";
     }
 
     //Shortens/Lengthens Rope Length depending on player input
