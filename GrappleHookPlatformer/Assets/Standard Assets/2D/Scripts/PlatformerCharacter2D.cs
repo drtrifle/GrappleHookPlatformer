@@ -20,6 +20,11 @@ public class PlatformerCharacter2D : MonoBehaviour {
 
     private Transform playerGraphics;   // Refernce to the player graphics to change direction
 
+    //GrappleHook Vars
+    private bool m_Swinging;          // True when player is attached to grapple hook
+    public Vector2 ropeHook;
+    public float swingForce = 4f;
+
     private void Awake() {
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");
@@ -61,8 +66,29 @@ public class PlatformerCharacter2D : MonoBehaviour {
         // Set whether or not the character is crouching in the animator
         m_Anim.SetBool("Crouch", crouch);
 
+        // With Grapple Hook Attached & Player not on ground
+        if (m_Swinging && !m_Grounded) {
+            // 1 - Get a normalized direction vector from the player to the hook point
+            Vector2 playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
+
+            // 2 - Inverse the direction to get a perpendicular direction
+            Vector2 perpendicularDirection;
+            if (move < 0) {
+                perpendicularDirection = new Vector2(-playerToHookDirection.y, playerToHookDirection.x);
+                Vector2 leftPerpPos = (Vector2)transform.position - perpendicularDirection * -2f;
+                Debug.DrawLine(transform.position, leftPerpPos, Color.green, 0f);
+            } else {
+                perpendicularDirection = new Vector2(playerToHookDirection.y, -playerToHookDirection.x);
+                Vector2 rightPerpPos = (Vector2)transform.position + perpendicularDirection * 2f;
+                Debug.DrawLine(transform.position, rightPerpPos, Color.green, 0f);
+            }
+
+            Vector2 swingForce = perpendicularDirection * this.swingForce;
+            m_Rigidbody2D.AddForce(swingForce, ForceMode2D.Force);
+        }
+
         //only control the player if grounded or airControl is turned on
-        if (m_Grounded || m_AirControl) {
+        if ((m_Grounded || m_AirControl) && !m_Swinging) {
             // Reduce the speed if crouching by the crouchSpeed multiplier
             move = (crouch ? move * m_CrouchSpeed : move);
 
@@ -83,6 +109,7 @@ public class PlatformerCharacter2D : MonoBehaviour {
                 Flip();
             }
         }
+
         // If the player should jump...
         if (m_Grounded && jump && m_Anim.GetBool("Ground")) {
             // Add a vertical force to the player.
@@ -101,5 +128,9 @@ public class PlatformerCharacter2D : MonoBehaviour {
         Vector3 theScale = playerGraphics.localScale;
         theScale.x *= -1;
         playerGraphics.localScale = theScale;
+    }
+
+    public void SetSwingState(bool isSwinging) {
+        m_Swinging = isSwinging;
     }
 }

@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 47570433}
   - component: {fileID: 47570432}
   - component: {fileID: 47570434}
+  - component: {fileID: 47570435}
   m_Layer: 0
   m_Name: grassMid (9)
   m_TagString: Terrain
@@ -211,6 +212,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &47570435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47570431}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &82803210
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +242,7 @@ GameObject:
   - component: {fileID: 82803212}
   - component: {fileID: 82803211}
   - component: {fileID: 82803213}
+  - component: {fileID: 82803214}
   m_Layer: 0
   m_Name: grassMid (16)
   m_TagString: Terrain
@@ -310,6 +332,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &82803214
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82803210}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &86657380
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +362,7 @@ GameObject:
   - component: {fileID: 86657382}
   - component: {fileID: 86657381}
   - component: {fileID: 86657383}
+  - component: {fileID: 86657384}
   m_Layer: 0
   m_Name: grassCenter
   m_TagString: Terrain
@@ -409,6 +452,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &86657384
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86657380}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &146672831 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4305234476644068, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
@@ -424,6 +487,7 @@ GameObject:
   - component: {fileID: 249071104}
   - component: {fileID: 249071103}
   - component: {fileID: 249071105}
+  - component: {fileID: 249071106}
   m_Layer: 0
   m_Name: grassMid (1)
   m_TagString: Terrain
@@ -513,6 +577,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &249071106
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249071102}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &288853740
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +607,7 @@ GameObject:
   - component: {fileID: 288853742}
   - component: {fileID: 288853741}
   - component: {fileID: 288853743}
+  - component: {fileID: 288853744}
   m_Layer: 0
   m_Name: grassCliff_left (1)
   m_TagString: Terrain
@@ -620,6 +705,26 @@ PolygonCollider2D:
       - {x: 0.3203125, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &288853744
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288853740}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &341666751
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +735,7 @@ GameObject:
   - component: {fileID: 341666753}
   - component: {fileID: 341666752}
   - component: {fileID: 341666754}
+  - component: {fileID: 341666755}
   m_Layer: 0
   m_Name: grassCliff_right
   m_TagString: Terrain
@@ -728,6 +834,26 @@ PolygonCollider2D:
       - {x: -0.125, y: -0.46875}
       - {x: 0.109375, y: -0.390625}
       - {x: 0.28125, y: -0.2890625}
+--- !u!50 &341666755
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 341666751}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &364075513
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +864,7 @@ GameObject:
   - component: {fileID: 364075515}
   - component: {fileID: 364075514}
   - component: {fileID: 364075516}
+  - component: {fileID: 364075517}
   m_Layer: 0
   m_Name: grassMid (8)
   m_TagString: Terrain
@@ -827,6 +954,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &364075517
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 364075513}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &378491084
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +984,7 @@ GameObject:
   - component: {fileID: 378491086}
   - component: {fileID: 378491085}
   - component: {fileID: 378491087}
+  - component: {fileID: 378491088}
   m_Layer: 0
   m_Name: grassMid (4)
   m_TagString: Terrain
@@ -926,6 +1074,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &378491088
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378491084}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &379760320
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +1104,7 @@ GameObject:
   - component: {fileID: 379760322}
   - component: {fileID: 379760321}
   - component: {fileID: 379760323}
+  - component: {fileID: 379760324}
   m_Layer: 0
   m_Name: grassMid (3)
   m_TagString: Terrain
@@ -1025,6 +1194,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &379760324
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379760320}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &381750281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1224,7 @@ GameObject:
   - component: {fileID: 381750283}
   - component: {fileID: 381750282}
   - component: {fileID: 381750284}
+  - component: {fileID: 381750285}
   m_Layer: 0
   m_Name: grassMid (7)
   m_TagString: Terrain
@@ -1124,6 +1314,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &381750285
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381750281}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &381859440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1344,7 @@ GameObject:
   - component: {fileID: 381859442}
   - component: {fileID: 381859441}
   - component: {fileID: 381859443}
+  - component: {fileID: 381859444}
   m_Layer: 0
   m_Name: grassMid (11)
   m_TagString: Terrain
@@ -1223,6 +1434,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &381859444
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381859440}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &386508082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1464,7 @@ GameObject:
   - component: {fileID: 386508084}
   - component: {fileID: 386508083}
   - component: {fileID: 386508085}
+  - component: {fileID: 386508086}
   m_Layer: 0
   m_Name: grassMid (5)
   m_TagString: Terrain
@@ -1322,6 +1554,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &386508086
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 386508082}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &410186448 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4367099472278336, guid: 1071bdb9b21a8484395b287f33116a69,
@@ -1337,6 +1589,7 @@ GameObject:
   - component: {fileID: 438612918}
   - component: {fileID: 438612917}
   - component: {fileID: 438612919}
+  - component: {fileID: 438612920}
   m_Layer: 0
   m_Name: grassMid (6)
   m_TagString: Terrain
@@ -1426,6 +1679,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &438612920
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438612916}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &446459375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1982,7 @@ GameObject:
   - component: {fileID: 586406065}
   - component: {fileID: 586406064}
   - component: {fileID: 586406066}
+  - component: {fileID: 586406067}
   m_Layer: 0
   m_Name: grassMid
   m_TagString: Terrain
@@ -1801,6 +2075,26 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &586406067
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 586406063}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &599450850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +2105,7 @@ GameObject:
   - component: {fileID: 599450852}
   - component: {fileID: 599450851}
   - component: {fileID: 599450853}
+  - component: {fileID: 599450854}
   m_Layer: 0
   m_Name: grassMid (19)
   m_TagString: Terrain
@@ -1900,6 +2195,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &599450854
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599450850}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &609570725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,6 +2225,7 @@ GameObject:
   - component: {fileID: 609570727}
   - component: {fileID: 609570726}
   - component: {fileID: 609570728}
+  - component: {fileID: 609570729}
   m_Layer: 0
   m_Name: grassMid (18)
   m_TagString: Terrain
@@ -1999,6 +2315,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &609570729
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609570725}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &641202131
 Prefab:
   m_ObjectHideFlags: 0
@@ -2056,6 +2392,7 @@ GameObject:
   - component: {fileID: 667346519}
   - component: {fileID: 667346518}
   - component: {fileID: 667346520}
+  - component: {fileID: 667346521}
   m_Layer: 0
   m_Name: grassMid (1)
   m_TagString: Terrain
@@ -2145,6 +2482,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &667346521
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667346517}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &686999772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2571,7 @@ GameObject:
   - component: {fileID: 693644580}
   - component: {fileID: 693644579}
   - component: {fileID: 693644581}
+  - component: {fileID: 693644582}
   m_Layer: 0
   m_Name: grassMid (13)
   m_TagString: Terrain
@@ -2303,6 +2661,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &693644582
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693644578}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &716430766
 Prefab:
   m_ObjectHideFlags: 0
@@ -2402,6 +2780,7 @@ GameObject:
   - component: {fileID: 886628391}
   - component: {fileID: 886628390}
   - component: {fileID: 886628392}
+  - component: {fileID: 886628393}
   m_Layer: 0
   m_Name: grassCliff_right
   m_TagString: Terrain
@@ -2491,6 +2870,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &886628393
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 886628389}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &926800775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,6 +2900,7 @@ GameObject:
   - component: {fileID: 926800777}
   - component: {fileID: 926800776}
   - component: {fileID: 926800778}
+  - component: {fileID: 926800779}
   m_Layer: 0
   m_Name: grassMid (1)
   m_TagString: Terrain
@@ -2593,6 +2993,26 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &926800779
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926800775}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &936516934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,6 +3023,7 @@ GameObject:
   - component: {fileID: 936516936}
   - component: {fileID: 936516935}
   - component: {fileID: 936516937}
+  - component: {fileID: 936516938}
   m_Layer: 0
   m_Name: grassCenter (1)
   m_TagString: Terrain
@@ -2692,6 +3113,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &936516938
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 936516934}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &941092839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,6 +3143,7 @@ GameObject:
   - component: {fileID: 941092841}
   - component: {fileID: 941092840}
   - component: {fileID: 941092842}
+  - component: {fileID: 941092843}
   m_Layer: 0
   m_Name: grassCliff_left
   m_TagString: Terrain
@@ -2791,6 +3233,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &941092843
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941092839}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &954399822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +3336,7 @@ GameObject:
   - component: {fileID: 966815248}
   - component: {fileID: 966815247}
   - component: {fileID: 966815249}
+  - component: {fileID: 966815250}
   m_Layer: 0
   m_Name: grassMid (2)
   m_TagString: Terrain
@@ -2963,6 +3426,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &966815250
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966815246}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &996450464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,6 +3487,7 @@ GameObject:
   - component: {fileID: 1051807191}
   - component: {fileID: 1051807190}
   - component: {fileID: 1051807192}
+  - component: {fileID: 1051807193}
   m_Layer: 0
   m_Name: grassMid (2)
   m_TagString: Terrain
@@ -3096,6 +3580,26 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &1051807193
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051807189}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1073930881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,6 +3610,7 @@ GameObject:
   - component: {fileID: 1073930883}
   - component: {fileID: 1073930882}
   - component: {fileID: 1073930884}
+  - component: {fileID: 1073930885}
   m_Layer: 0
   m_Name: grassMid (5)
   m_TagString: Terrain
@@ -3198,6 +3703,26 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &1073930885
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073930881}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1123267751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3733,7 @@ GameObject:
   - component: {fileID: 1123267753}
   - component: {fileID: 1123267752}
   - component: {fileID: 1123267754}
+  - component: {fileID: 1123267755}
   m_Layer: 0
   m_Name: grassMid
   m_TagString: Terrain
@@ -3297,6 +3823,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1123267755
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123267751}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1127379413
 Prefab:
   m_ObjectHideFlags: 0
@@ -3307,12 +3853,12 @@ Prefab:
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 616.5
+      value: 462.5
       objectReference: {fileID: 0}
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 270.5
+      value: 202
       objectReference: {fileID: 0}
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
@@ -3480,6 +4026,7 @@ GameObject:
   - component: {fileID: 1196423062}
   - component: {fileID: 1196423061}
   - component: {fileID: 1196423063}
+  - component: {fileID: 1196423064}
   m_Layer: 0
   m_Name: grassMid (3)
   m_TagString: Terrain
@@ -3572,6 +4119,26 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &1196423064
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196423060}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1330355037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,6 +4182,7 @@ GameObject:
   - component: {fileID: 1343287055}
   - component: {fileID: 1343287054}
   - component: {fileID: 1343287056}
+  - component: {fileID: 1343287057}
   m_Layer: 0
   m_Name: grassMid (20)
   m_TagString: Terrain
@@ -3704,6 +4272,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1343287057
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343287053}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1406181370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,6 +4302,7 @@ GameObject:
   - component: {fileID: 1406181372}
   - component: {fileID: 1406181371}
   - component: {fileID: 1406181373}
+  - component: {fileID: 1406181374}
   m_Layer: 0
   m_Name: grassMid (17)
   m_TagString: Terrain
@@ -3803,6 +4392,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1406181374
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406181370}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1411553917
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,6 +4422,7 @@ GameObject:
   - component: {fileID: 1411553919}
   - component: {fileID: 1411553918}
   - component: {fileID: 1411553920}
+  - component: {fileID: 1411553921}
   m_Layer: 0
   m_Name: grassMid (2)
   m_TagString: Terrain
@@ -3902,6 +4512,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1411553921
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411553917}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1444429097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,6 +4542,7 @@ GameObject:
   - component: {fileID: 1444429099}
   - component: {fileID: 1444429098}
   - component: {fileID: 1444429100}
+  - component: {fileID: 1444429101}
   m_Layer: 0
   m_Name: grassMid (12)
   m_TagString: Terrain
@@ -4001,6 +4632,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1444429101
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1444429097}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1465874892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,6 +4773,7 @@ GameObject:
   - component: {fileID: 1510326005}
   - component: {fileID: 1510326004}
   - component: {fileID: 1510326006}
+  - component: {fileID: 1510326007}
   m_Layer: 0
   m_Name: grassMid (21)
   m_TagString: Terrain
@@ -4211,6 +4863,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1510326007
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1510326003}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1569476573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4221,6 +4893,7 @@ GameObject:
   - component: {fileID: 1569476575}
   - component: {fileID: 1569476574}
   - component: {fileID: 1569476576}
+  - component: {fileID: 1569476577}
   m_Layer: 0
   m_Name: grassCliff_left
   m_TagString: Terrain
@@ -4318,6 +4991,26 @@ PolygonCollider2D:
       - {x: 0.3203125, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &1569476577
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569476573}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1600362078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,6 +5192,7 @@ GameObject:
   - component: {fileID: 1648209371}
   - component: {fileID: 1648209370}
   - component: {fileID: 1648209372}
+  - component: {fileID: 1648209373}
   m_Layer: 0
   m_Name: grassMid
   m_TagString: Terrain
@@ -4588,6 +5282,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1648209373
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648209369}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1779223713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4598,6 +5312,7 @@ GameObject:
   - component: {fileID: 1779223715}
   - component: {fileID: 1779223714}
   - component: {fileID: 1779223716}
+  - component: {fileID: 1779223717}
   m_Layer: 0
   m_Name: grassMid (10)
   m_TagString: Terrain
@@ -4687,6 +5402,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1779223717
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779223713}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1785862313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4697,6 +5432,7 @@ GameObject:
   - component: {fileID: 1785862315}
   - component: {fileID: 1785862314}
   - component: {fileID: 1785862316}
+  - component: {fileID: 1785862317}
   m_Layer: 0
   m_Name: grassMid (4)
   m_TagString: Terrain
@@ -4789,6 +5525,26 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!50 &1785862317
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1785862313}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1870424178
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,6 +5555,7 @@ GameObject:
   - component: {fileID: 1870424179}
   - component: {fileID: 1870424181}
   - component: {fileID: 1870424180}
+  - component: {fileID: 1870424182}
   m_Layer: 0
   m_Name: grassMid (22)
   m_TagString: Terrain
@@ -4888,6 +5645,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1870424182
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1870424178}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1879446401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,6 +5675,7 @@ GameObject:
   - component: {fileID: 1879446403}
   - component: {fileID: 1879446402}
   - component: {fileID: 1879446404}
+  - component: {fileID: 1879446405}
   m_Layer: 0
   m_Name: grassMid (15)
   m_TagString: Terrain
@@ -4987,6 +5765,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1879446405
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879446401}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1925079354
 Prefab:
   m_ObjectHideFlags: 0
@@ -5060,6 +5858,7 @@ GameObject:
   - component: {fileID: 1943318352}
   - component: {fileID: 1943318351}
   - component: {fileID: 1943318353}
+  - component: {fileID: 1943318354}
   m_Layer: 0
   m_Name: grassCliff_right (1)
   m_TagString: Terrain
@@ -5158,6 +5957,26 @@ PolygonCollider2D:
       - {x: -0.125, y: -0.46875}
       - {x: 0.109375, y: -0.390625}
       - {x: 0.28125, y: -0.2890625}
+--- !u!50 &1943318354
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943318350}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1979601684
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,6 +5987,7 @@ GameObject:
   - component: {fileID: 1979601686}
   - component: {fileID: 1979601685}
   - component: {fileID: 1979601687}
+  - component: {fileID: 1979601688}
   m_Layer: 0
   m_Name: grassCenter (2)
   m_TagString: Terrain
@@ -5257,6 +6077,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1979601688
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979601684}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1990125366
 GameObject:
   m_ObjectHideFlags: 0
@@ -5619,6 +6459,7 @@ GameObject:
   - component: {fileID: 2124436037}
   - component: {fileID: 2124436036}
   - component: {fileID: 2124436038}
+  - component: {fileID: 2124436039}
   m_Layer: 0
   m_Name: grassMid (14)
   m_TagString: Terrain
@@ -5708,3 +6549,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &2124436039
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124436035}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
