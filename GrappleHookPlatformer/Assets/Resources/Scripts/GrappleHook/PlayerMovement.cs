@@ -46,9 +46,9 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
 
-        if (jumpInput > 0f) {
+        if (jumpInput > 0f && !isSwinging) {
             animator.SetBool("Ground", false);
-            isJumping = true;
+            //isJumping = true;
             rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed);
         }
 
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
         if (horizontalInput != 0f) {
             animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
             playerSprite.flipX = horizontalInput < 0f;
-            if (isSwinging && !isPlayerGrounded && !isJumping) {
+            if (isSwinging && !isPlayerGrounded) {
                 HandleSwinging(horizontalInput);
             } else {
                 //animator.SetBool("IsSwinging", false);
