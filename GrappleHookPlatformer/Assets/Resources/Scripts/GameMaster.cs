@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
 
-    public static GameMaster gameMaster;
-
-    private void Start() {
-        if(gameMaster == null) {
-            gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-        } 
-
-        audioSource = GetComponent<AudioSource>();
-    }
+    public static GameMaster gameMaster;  
 
     //Vars for spawning player;
     public Transform playerPrefab;
@@ -22,6 +14,17 @@ public class GameMaster : MonoBehaviour {
     public GameObject levelClearedText;
     private bool isPlayerRespawning = false;
     AudioSource audioSource;
+
+    //Vars for Timer
+    public Timer timerText;
+
+    private void Start() {
+        if (gameMaster == null) {
+            gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        }
+
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public IEnumerator RespawnPlayer() {
         audioSource.Play();
@@ -43,6 +46,7 @@ public class GameMaster : MonoBehaviour {
 
     public void WinLevel() {
         levelClearedText.SetActive(true);
+        timerText.StopTimer();
     }
 
 }

@@ -5236,6 +5236,11 @@ Prefab:
       propertyPath: levelClearedText
       value: 
       objectReference: {fileID: 2097281970}
+    - target: {fileID: 114728348635653792, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 740787138}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1071bdb9b21a8484395b287f33116a69, type: 2}
   m_IsPrefabParent: 0
