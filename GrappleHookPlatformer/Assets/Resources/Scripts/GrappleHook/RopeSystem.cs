@@ -64,6 +64,8 @@ public class RopeSystem : MonoBehaviour {
                     HandleRopeWrapping();
                     break;
                 case ("GrappleObject"):
+                    playerMovement.isSwinging = true;
+                    playerMovement.ropeHook = grappleObjectRb.transform.position;
                     break;
             }
             
@@ -260,7 +262,6 @@ public class RopeSystem : MonoBehaviour {
                     ropeJoint.connectedBody = grappleObjectRb;
                     ropeJoint.distance = Vector2.Distance(playerPosition, hit.collider.transform.position);
                     ropeJoint.enabled = true;
-                    //ropeHingeAnchorSprite.enabled = true;
                     break;
             }
             

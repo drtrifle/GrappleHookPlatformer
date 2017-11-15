@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     //Rope Swing ability vars
     public Vector2 ropeHook;
     public float swingForce = 4f;
+    public bool isJumping = false;                                             // To differentiate if reson not touching ground due to jump or swing
 
     // Vars to Check if Player is on the ground
     [SerializeField]
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (jumpInput > 0f) {
             animator.SetBool("Ground", false);
+            isJumping = true;
             rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed);
         }
 
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
         if (horizontalInput != 0f) {
             animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
             playerSprite.flipX = horizontalInput < 0f;
-            if (isSwinging && !isPlayerGrounded) {
+            if (isSwinging && !isPlayerGrounded && !isJumping) {
                 HandleSwinging(horizontalInput);
             } else {
                 //animator.SetBool("IsSwinging", false);
@@ -121,10 +123,10 @@ public class PlayerMovement : MonoBehaviour {
             if (colliders[i].gameObject != gameObject) {
                 animator.SetBool("Ground", true);
                 isPlayerGrounded = true;
+                isJumping = false;
                 return;
             }
         }
-
         isPlayerGrounded = false;
     }
 }
