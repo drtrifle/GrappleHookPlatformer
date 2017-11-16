@@ -39,29 +39,27 @@ public class GameMaster : MonoBehaviour {
 
         //ResetHealthUI
         healthUIScript.ResetHealth();
-        playerHealth = 3;
 
         isPlayerRespawning = false;
     }
 
-    public static void DamagePlayer(Player player) {
-        GameMaster gm = GameMaster.gameMaster;
-
-        gm.healthUIScript.ReduceHealth();
-        gm.playerHealth--;
-
-        if (gm.playerHealth == 0) {
-            GameMaster.KillPlayer(player);
-        }
+    public void DamagePlayer(int damage) {
+        healthUIScript.ReduceHealth(damage);
     }
 
     public static void KillPlayer(Player player) {
         GameMaster gm = GameMaster.gameMaster;
+
+        //If player is not currently respawning
         if (!gm.isPlayerRespawning) {
             Destroy(player.gameObject);
             gameMaster.StartCoroutine(gameMaster.RespawnPlayer());
             gm.isPlayerRespawning = true;
+
+            //Update Health UI
+            gm.healthUIScript.ReduceHealth(3);
         }
+
     }
 
     public void WinLevel() {

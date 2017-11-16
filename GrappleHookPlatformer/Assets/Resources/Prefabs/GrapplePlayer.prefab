@@ -152,9 +152,9 @@ GameObject:
   - component: {fileID: 58393668325871150}
   - component: {fileID: 61542200263671690}
   - component: {fileID: 50169917672856016}
-  - component: {fileID: 114802391436864226}
   - component: {fileID: 232656455426333500}
   - component: {fileID: 120666481355843698}
+  - component: {fileID: 114802391436864226}
   - component: {fileID: 114059806960603412}
   - component: {fileID: 114550099431731108}
   m_Layer: 8
@@ -530,11 +530,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55eea8682506b6c4cad5166e89197ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   jumpSpeed: 12
   isSwinging: 0
   ropeHook: {x: 0, y: 0}
   swingForce: 10
+  isJumping: 0
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -551,8 +552,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats:
-    health: 100
+    health: 3
+    isInvincible: 0
   fallBoundary: -20
+  spriteBodyRenderer: {fileID: 212264781226052424}
+  spriteArmRenderer: {fileID: 212374439193407424}
 --- !u!120 &120666481355843698
 LineRenderer:
   m_ObjectHideFlags: 1

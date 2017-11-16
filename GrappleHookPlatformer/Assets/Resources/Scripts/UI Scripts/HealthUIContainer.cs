@@ -24,16 +24,18 @@ public class HealthUIContainer : MonoBehaviour {
         currIndex++;
     }
 
-    public void ReduceHealth() {
-        //Min Health, do nothing
-        if (currIndex == 0) {
+    public void ReduceHealth(int damage) {
+        while(damage > 0) {
+            //Min Health, do nothing
+            if (currIndex == 0) {
+                imageArray[currIndex].sprite = emptyHeart;
+                return;
+            }
+
             imageArray[currIndex].sprite = emptyHeart;
-            return;
+            currIndex--;
+            damage--;
         }
-
-        imageArray[currIndex].sprite = emptyHeart;
-        currIndex--;
-
     }
 
     public void ResetHealth() {    

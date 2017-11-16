@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
     void Awake() {
-        playerSprite = GetComponent<SpriteRenderer>();
+        playerSprite = transform.Find("Graphics").GetComponent<SpriteRenderer>();
         rBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         m_GroundCheck = transform.Find("GroundCheck");
