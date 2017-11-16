@@ -18,6 +18,10 @@ public class GameMaster : MonoBehaviour {
     //Vars for Timer
     public Timer timerText;
 
+    //Vars for playerHealth
+    private int playerHealth = 3;
+    public HealthUIContainer healthUIScript;
+
     private void Start() {
         if (gameMaster == null) {
             gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
@@ -32,7 +36,23 @@ public class GameMaster : MonoBehaviour {
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         GameObject particleClone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation);
         Destroy(particleClone, 3f);
+
+        //ResetHealthUI
+        healthUIScript.ResetHealth();
+        playerHealth = 3;
+
         isPlayerRespawning = false;
+    }
+
+    public static void DamagePlayer(Player player) {
+        GameMaster gm = GameMaster.gameMaster;
+
+        gm.healthUIScript.ReduceHealth();
+        gm.playerHealth--;
+
+        if (gm.playerHealth == 0) {
+            GameMaster.KillPlayer(player);
+        }
     }
 
     public static void KillPlayer(Player player) {
