@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Script to move the BulletTrailEffect
-public class MoveTrail : MonoBehaviour {
+public class BulletTrail : MonoBehaviour {
 
     public int moveSpeed = 230;
 

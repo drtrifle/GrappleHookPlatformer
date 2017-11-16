@@ -62,6 +62,7 @@ public class RopeSystem : MonoBehaviour {
                     playerMovement.isSwinging = true;
                     playerMovement.ropeHook = ropePositions.Last();
                     HandleRopeWrapping();
+                    HandleRopeUnwrapping();
                     break;
                 case ("GrappleObject"):
                     playerMovement.isSwinging = true;
@@ -113,6 +114,75 @@ public class RopeSystem : MonoBehaviour {
             }
         }
     }
+
+    //Unwraps Rope around edges of polygoncolliders that touch the rope
+    private void HandleRopeUnwrapping() {
+        //Ignore if rope attached at 1 point only
+        if (ropePositions.Count <= 1) {
+            return;
+        }
+
+        // Hinge = next point up from the player position
+        // Anchor = next point up from the Hinge
+        // Hinge Angle = Angle between anchor and hinge
+        // Player Angle = Angle between anchor and player
+
+        // anchorIndex is the index in the ropePositions collection two positions from the end of the collection. 
+        var anchorIndex = ropePositions.Count - 2;
+        // index in the collection where the current hinge point is stored
+        var hingeIndex = ropePositions.Count - 1;
+
+        Vector2 anchorPosition = ropePositions[anchorIndex];
+        Vector2 hingePosition = ropePositions[hingeIndex];
+        Vector2 hingeDir = hingePosition - anchorPosition;
+
+        // Angle between hing & anchor point
+        float hingeAngle = Vector2.Angle(anchorPosition, hingeDir);
+        // Vector that points from anchorPosition to the player pos
+        var playerDir = playerPosition - anchorPosition;
+        // angle between the anchor point and the player
+        var playerAngle = Vector2.Angle(anchorPosition, playerDir);
+
+        if (!wrapPointsLookup.ContainsKey(hingePosition)) {
+            Debug.LogError("We were not tracking hingePosition (" + hingePosition + ") in the look up dictionary.");
+            return;
+        }
+
+        if (playerAngle < hingeAngle) {
+            if (wrapPointsLookup[hingePosition] == 1) {
+                UnwrapRopePosition(anchorIndex, hingeIndex);
+                return;
+            }
+
+            wrapPointsLookup[hingePosition] = -1;
+        } else {
+            if (wrapPointsLookup[hingePosition] == -1) {
+                UnwrapRopePosition(anchorIndex, hingeIndex);
+                return;
+            }
+
+            wrapPointsLookup[hingePosition] = 1;
+        }
+    }
+
+    private void UnwrapRopePosition(int anchorIndex, int hingeIndex) {
+        // 1
+        var newAnchorPosition = ropePositions[anchorIndex];
+        wrapPointsLookup.Remove(ropePositions[hingeIndex]);
+        ropePositions.RemoveAt(hingeIndex);
+
+        // 2
+        ropeHingeAnchorRb.transform.position = newAnchorPosition;
+        distanceSet = false;
+
+        // Set new rope distance joint distance for anchor position if not yet set.
+        if (distanceSet) {
+            return;
+        }
+        ropeJoint.distance = Vector2.Distance(transform.position, newAnchorPosition);
+        distanceSet = true;
+    }
+
 
     //Update the LineRenderer for Rope Effect
     private void UpdateRopePositions() {
