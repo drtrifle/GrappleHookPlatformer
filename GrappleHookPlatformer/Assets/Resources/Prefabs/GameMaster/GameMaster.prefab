@@ -53,7 +53,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 65de528bf187947479f8ef10c1948561, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -155,3 +155,6 @@ MonoBehaviour:
   spawnDelay: 3
   spawnPrefab: {fileID: 4299143034519558, guid: 61285b8da18c15b4784c4c432bcbdaaa,
     type: 2}
+  levelClearedText: {fileID: 0}
+  timerText: {fileID: 0}
+  healthUIScript: {fileID: 0}
