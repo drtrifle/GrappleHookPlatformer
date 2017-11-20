@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 47570433}
   - component: {fileID: 47570432}
   - component: {fileID: 47570434}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 82803212}
   - component: {fileID: 82803211}
   - component: {fileID: 82803213}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 249071104}
   - component: {fileID: 249071103}
   - component: {fileID: 249071105}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 364075515}
   - component: {fileID: 364075514}
   - component: {fileID: 364075516}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (8)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 378491086}
   - component: {fileID: 378491085}
   - component: {fileID: 378491087}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (4)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 379760322}
   - component: {fileID: 379760321}
   - component: {fileID: 379760323}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (3)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 381750283}
   - component: {fileID: 381750282}
   - component: {fileID: 381750284}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (7)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1160,7 +1160,7 @@ GameObject:
   - component: {fileID: 381859442}
   - component: {fileID: 381859441}
   - component: {fileID: 381859443}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1262,7 +1262,7 @@ GameObject:
   - component: {fileID: 386508084}
   - component: {fileID: 386508083}
   - component: {fileID: 386508085}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (5)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 438612918}
   - component: {fileID: 438612917}
   - component: {fileID: 438612919}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (6)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1778,7 +1778,7 @@ GameObject:
   - component: {fileID: 599450852}
   - component: {fileID: 599450851}
   - component: {fileID: 599450853}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (19)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1880,7 +1880,7 @@ GameObject:
   - component: {fileID: 609570727}
   - component: {fileID: 609570726}
   - component: {fileID: 609570728}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (18)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   - component: {fileID: 667346519}
   - component: {fileID: 667346518}
   - component: {fileID: 667346520}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -2265,6 +2265,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114059806960603412, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
+        type: 2}
+      propertyPath: ropeLayerMask.m_Bits
+      value: 7169
+      objectReference: {fileID: 0}
+    - target: {fileID: 114550099431731108, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4,
+        type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 4097
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85a4b5437dcc8004d9d7d2b9e9552fe4, type: 2}
   m_IsPrefabParent: 0
@@ -2278,7 +2288,7 @@ GameObject:
   - component: {fileID: 693644580}
   - component: {fileID: 693644579}
   - component: {fileID: 693644581}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (13)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -2395,7 +2405,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740787134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 139.66231, z: 0}
+  m_LocalPosition: {x: 0, y: 170.5069, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1127379414}
@@ -2594,7 +2604,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811476259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 144.66231, z: 0}
+  m_LocalPosition: {x: -400, y: 175.5069, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 208580824}
@@ -2634,9 +2644,10 @@ GameObject:
   m_Component:
   - component: {fileID: 813168221}
   - component: {fileID: 813168220}
-  m_Layer: 0
+  - component: {fileID: 813168222}
+  m_Layer: 12
   m_Name: grassCenter
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2698,6 +2709,34 @@ Transform:
   m_Father: {fileID: 686999773}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &813168222
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 813168219}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.5, y: 0.5}
 --- !u!1 &886628389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,7 +2747,7 @@ GameObject:
   - component: {fileID: 886628391}
   - component: {fileID: 886628390}
   - component: {fileID: 886628392}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassCliff_right
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -2918,7 +2957,7 @@ GameObject:
   - component: {fileID: 941092841}
   - component: {fileID: 941092840}
   - component: {fileID: 941092842}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassCliff_left
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -3024,6 +3063,9 @@ GameObject:
   m_Component:
   - component: {fileID: 947614544}
   - component: {fileID: 947614543}
+  - component: {fileID: 947614547}
+  - component: {fileID: 947614546}
+  - component: {fileID: 947614545}
   m_Layer: 0
   m_Name: mouseEnemy
   m_TagString: Untagged
@@ -3082,12 +3124,72 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 947614542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.51, y: -4.51, z: 0}
+  m_LocalPosition: {x: 11.5, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947614545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947614542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04d51ccda778c74d818df8e9e265b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 4096
+--- !u!61 &947614546
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947614542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!50 &947614547
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947614542}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &966815246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,7 +3200,7 @@ GameObject:
   - component: {fileID: 966815248}
   - component: {fileID: 966815247}
   - component: {fileID: 966815249}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -3482,7 +3584,7 @@ GameObject:
   - component: {fileID: 1123267753}
   - component: {fileID: 1123267752}
   - component: {fileID: 1123267754}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -3584,12 +3686,12 @@ Prefab:
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 459
+      value: 616.5
       objectReference: {fileID: 0}
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 166
+      value: 270.5
       objectReference: {fileID: 0}
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
@@ -3826,7 +3928,7 @@ GameObject:
   - component: {fileID: 1343287055}
   - component: {fileID: 1343287054}
   - component: {fileID: 1343287056}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (20)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -3928,7 +4030,7 @@ GameObject:
   - component: {fileID: 1406181372}
   - component: {fileID: 1406181371}
   - component: {fileID: 1406181373}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (17)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -4030,7 +4132,7 @@ GameObject:
   - component: {fileID: 1411553919}
   - component: {fileID: 1411553918}
   - component: {fileID: 1411553920}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -4132,7 +4234,7 @@ GameObject:
   - component: {fileID: 1444429099}
   - component: {fileID: 1444429098}
   - component: {fileID: 1444429100}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -4345,7 +4447,7 @@ GameObject:
   - component: {fileID: 1510326005}
   - component: {fileID: 1510326004}
   - component: {fileID: 1510326006}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (21)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -4771,7 +4873,7 @@ GameObject:
   - component: {fileID: 1648209371}
   - component: {fileID: 1648209370}
   - component: {fileID: 1648209372}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -4873,7 +4975,7 @@ GameObject:
   - component: {fileID: 1779223715}
   - component: {fileID: 1779223714}
   - component: {fileID: 1779223716}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -5077,7 +5179,7 @@ GameObject:
   - component: {fileID: 1819624792}
   - component: {fileID: 1819624794}
   - component: {fileID: 1819624793}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (23)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -5179,7 +5281,7 @@ GameObject:
   - component: {fileID: 1870424179}
   - component: {fileID: 1870424181}
   - component: {fileID: 1870424180}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (22)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -5281,7 +5383,7 @@ GameObject:
   - component: {fileID: 1879446403}
   - component: {fileID: 1879446402}
   - component: {fileID: 1879446404}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -5382,9 +5484,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1906035930}
   - component: {fileID: 1906035929}
-  m_Layer: 0
+  - component: {fileID: 1906035931}
+  m_Layer: 12
   m_Name: grassCenter (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5446,6 +5549,34 @@ Transform:
   m_Father: {fileID: 686999773}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1906035931
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906035928}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.5, y: 0.5}
 --- !u!1001 &1925079354
 Prefab:
   m_ObjectHideFlags: 0
@@ -5822,7 +5953,7 @@ GameObject:
   - component: {fileID: 2124436037}
   - component: {fileID: 2124436036}
   - component: {fileID: 2124436038}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: grassMid (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
