@@ -30,7 +30,9 @@ public class MouseEnemy : Enemy {
     void FixedUpdate () {
 
         //Move mouse enemy forward
-        rb2d.velocity = (moveDirection * moveSpeed);
+        Vector2 velocity = new Vector2(moveDirection.x * moveSpeed, rb2d.velocity.y);
+        rb2d.velocity = (velocity);
+
 
         //Raycast to detect if block in front
         RaycastHit2D hit;

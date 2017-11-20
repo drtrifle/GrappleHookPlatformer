@@ -465,7 +465,7 @@ MonoBehaviour:
   ropeRenderer: {fileID: 120666481355843698}
   ropeLayerMask:
     serializedVersion: 2
-    m_Bits: 3073
+    m_Bits: 7169
   climbSpeed: 3
 --- !u!114 &114303329119426754
 MonoBehaviour:
@@ -538,7 +538,7 @@ MonoBehaviour:
   isJumping: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4097
   isPlayerGrounded: 0
 --- !u!114 &114802391436864226
 MonoBehaviour:
