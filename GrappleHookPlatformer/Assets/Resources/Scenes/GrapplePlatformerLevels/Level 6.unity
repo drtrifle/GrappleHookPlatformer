@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABAIezxrJNtCwIAAH4EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1U8tu2zAQ/BWD56awBD/i3lo7cQsksRG36HlNrizCFCnwUccO/O8lKcpS1fZEcWZ2OfvQOwFTI7WvYLkin0bZhxHhRlVoNaef5UGgB8cedJIXSlcP7IBLZazxcAHCoKe0siFaeuh9RN78kc9DyDmFXsI5uvovitKi7nT/VjlJBVQ1sh2/YCfOxq182uikYpgkwTZVQnCTfBB7rgNBXuFMPMk4+Jri27m/lsgPpU2XW+CmKAza5EfDecW1b02TkXxRtgyZKjDHxtQvEC68MRkvZtFQk/X5L8FdFulCq+pr+3BTjS05PXqLFIztdbQPrzrnWWzOCcQR9gJ/lihf1ForJ5knrXYh1BnMV931VtuyRHrs8MbqAHT1/0cTarjG8t+Wglf7QH2cNMBOqNjsRRCj9mP55g3HnTAphUeDix8Gv8OhvzyJeOTaWE+lKsFZ9cTlca0566tbfMWNfeIVbzoZdiHUs1dOBzV5iE0O5Tu7VFpihFOVNUoQ9rz179rh0Adc7+UB8wjUqnYmiWt/l0FIhDv9eDygtup0m64p1ekZTblxVnCJnelAvPjGLpWUzU7229KG7ZwugPbCDo6zP3eR3E9m+TSDGZvdF9kU2d2cAU6KAnE+ySBfzElcVi59nSC2jdHUHj9m2SWXfjFDxjCk0VpDHf8PpuG05pdK9Q1yWagd1Yhy06SIxPU3UEsDBBQAAAgIAABAIexu4XRLNAAAADcAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RslIoKSpN1VFQKs7IL3etKClKBAqlJeYUg8QKMsvyS4B8JefUvJLUIqVaAFBLAwQUAAAICAAAQCHsdSSgwmwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9AzNNRRUEovSizIKAaKgDmlmSkgdrSShYmZkalholmKmUWaoWlqiq55SmKqSVpaaqq5iWGikaW5UixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABAIezxrJNtCwIAAH4EAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIexu4XRLNAAAADcAAAASACQAAAAAAAAAAAAAAFgCAABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAQCHsdSSgwmwAAAB4AAAACQAkAAAAAAAAAAAAAADgAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAADAAMAHAEAAJcDAAAAAA==
+    dataString: 
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -1434,39 +1434,7 @@ MonoBehaviour:
     _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors: []
-  tagNames:
-  - Basic Ground
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-  - 19
-  - 20
-  - 21
-  - 22
-  - 23
-  - 24
-  - 25
-  - 26
-  - 27
-  - 28
-  - 29
-  - 30
-  - 31
+  tagNames: []
   heuristic: 2
   heuristicScale: 1
   threadCount: 0
@@ -1479,7 +1447,7 @@ MonoBehaviour:
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
-  showGraphs: 1
+  showGraphs: 0
 --- !u!1 &438612916
 GameObject:
   m_ObjectHideFlags: 0
@@ -5995,7 +5963,7 @@ GameObject:
   - component: {fileID: 2088609316}
   - component: {fileID: 2088609317}
   m_Layer: 0
-  m_Name: fly
+  m_Name: flyEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6142,6 +6110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1a463b7736a8c4d8ea8456bc715ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 146672831}
+  updateRate: 2
+  speed: 300
+  fMode: 0
+  pathIsEnded: 0
+  nextWaypointDistance: 3
 --- !u!1 &2097281970 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1543983657530576, guid: 31b476f79115dcd42b8bc0d92753d9ad,
