@@ -58,7 +58,7 @@ public class RopeSystem : MonoBehaviour {
             crosshairSprite.enabled = false;
 
             switch (currentlyAttachedTag) {
-                case ("Terrain"):
+                case ("GrappleTerrain"):
                     playerMovement.isSwinging = true;
                     playerMovement.ropeHook = ropePositions.Last();
                     HandleRopeWrapping();
@@ -192,7 +192,7 @@ public class RopeSystem : MonoBehaviour {
         }
 
         switch (currentlyAttachedTag) {
-            case ("Terrain"):
+            case ("GrappleTerrain"):
                 //Count number of vertexs(including player)
                 ropeRenderer.positionCount = ropePositions.Count + 1;
 
@@ -309,7 +309,7 @@ public class RopeSystem : MonoBehaviour {
             currentlyAttachedTag = hit.collider.tag;
 
             switch (currentlyAttachedTag) {
-                case ("Terrain"):
+                case ("GrappleTerrain"):
                     ropeAttached = true;
 
                     //Check if raycast hit position is new

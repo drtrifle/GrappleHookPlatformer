@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 15480268}
   - component: {fileID: 15480267}
   - component: {fileID: 15480269}
+  - component: {fileID: 15480270}
   m_Layer: 12
   m_Name: snowCliff_left
   m_TagString: GrappleTerrain
@@ -219,6 +220,18 @@ PolygonCollider2D:
       - {x: 0.3203125, y: -0.5}
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
+--- !u!114 &15480270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 15480266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &47570431
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +519,7 @@ GameObject:
   - component: {fileID: 209527080}
   - component: {fileID: 209527079}
   - component: {fileID: 209527078}
+  - component: {fileID: 209527081}
   m_Layer: 12
   m_Name: snowMid (11)
   m_TagString: GrappleTerrain
@@ -598,6 +612,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &209527081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209527077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &216065821
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +634,7 @@ GameObject:
   - component: {fileID: 216065824}
   - component: {fileID: 216065823}
   - component: {fileID: 216065822}
+  - component: {fileID: 216065825}
   m_Layer: 12
   m_Name: snowCorner_left (1)
   m_TagString: GrappleTerrain
@@ -700,6 +727,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &216065825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216065821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &223402777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1041,7 @@ GameObject:
   - component: {fileID: 295863136}
   - component: {fileID: 295863135}
   - component: {fileID: 295863134}
+  - component: {fileID: 295863137}
   m_Layer: 12
   m_Name: snowMid (9)
   m_TagString: GrappleTerrain
@@ -1094,6 +1134,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295863137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295863133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &341666751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1269,7 @@ GameObject:
   - component: {fileID: 360884877}
   - component: {fileID: 360884876}
   - component: {fileID: 360884875}
+  - component: {fileID: 360884878}
   m_Layer: 12
   m_Name: snowMid (8)
   m_TagString: GrappleTerrain
@@ -1309,6 +1362,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &360884878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 360884874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &364075513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,6 +1486,7 @@ GameObject:
   - component: {fileID: 366378991}
   - component: {fileID: 366378990}
   - component: {fileID: 366378989}
+  - component: {fileID: 366378992}
   m_Layer: 12
   m_Name: snowMid (10)
   m_TagString: GrappleTerrain
@@ -1513,6 +1579,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &366378992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 366378988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!4 &374587622 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4073924499706292, guid: b699413447fb195458245fb8b99486d6,
@@ -2320,6 +2398,7 @@ GameObject:
   - component: {fileID: 502503061}
   - component: {fileID: 502503060}
   - component: {fileID: 502503059}
+  - component: {fileID: 502503062}
   m_Layer: 12
   m_Name: snowMid (1)
   m_TagString: GrappleTerrain
@@ -2412,6 +2491,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &502503062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502503058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &506820669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,6 +2513,7 @@ GameObject:
   - component: {fileID: 506820672}
   - component: {fileID: 506820671}
   - component: {fileID: 506820670}
+  - component: {fileID: 506820673}
   m_Layer: 12
   m_Name: snowHill_left
   m_TagString: GrappleTerrain
@@ -2515,6 +2607,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &506820673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506820669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &513760004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,6 +2660,7 @@ GameObject:
   - component: {fileID: 561648436}
   - component: {fileID: 561648435}
   - component: {fileID: 561648434}
+  - component: {fileID: 561648437}
   m_Layer: 12
   m_Name: snowMid
   m_TagString: GrappleTerrain
@@ -2648,6 +2753,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561648437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561648433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &586406063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,6 +3141,7 @@ GameObject:
   - component: {fileID: 633616024}
   - component: {fileID: 633616023}
   - component: {fileID: 633616022}
+  - component: {fileID: 633616025}
   m_Layer: 12
   m_Name: snowCliff_right
   m_TagString: GrappleTerrain
@@ -3122,6 +3240,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &633616025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 633616021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1001 &641202131
 Prefab:
   m_ObjectHideFlags: 0
@@ -3179,6 +3309,7 @@ GameObject:
   - component: {fileID: 654917350}
   - component: {fileID: 654917349}
   - component: {fileID: 654917348}
+  - component: {fileID: 654917351}
   m_Layer: 12
   m_Name: snowMid (5)
   m_TagString: GrappleTerrain
@@ -3271,6 +3402,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654917351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654917347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &667346517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,6 +4541,7 @@ GameObject:
   - component: {fileID: 1034044942}
   - component: {fileID: 1034044941}
   - component: {fileID: 1034044940}
+  - component: {fileID: 1034044943}
   m_Layer: 12
   m_Name: snowHill_left (2)
   m_TagString: GrappleTerrain
@@ -4491,6 +4635,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1034044943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034044939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1051807189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5241,6 +5397,7 @@ GameObject:
   - component: {fileID: 1400308249}
   - component: {fileID: 1400308248}
   - component: {fileID: 1400308247}
+  - component: {fileID: 1400308250}
   m_Layer: 12
   m_Name: snowCorner_left (2)
   m_TagString: GrappleTerrain
@@ -5333,6 +5490,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1400308250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1400308246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1403073554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5343,6 +5512,7 @@ GameObject:
   - component: {fileID: 1403073557}
   - component: {fileID: 1403073556}
   - component: {fileID: 1403073555}
+  - component: {fileID: 1403073558}
   m_Layer: 12
   m_Name: snowHill_left (3)
   m_TagString: GrappleTerrain
@@ -5436,6 +5606,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403073558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403073554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1406181370
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,6 +5934,7 @@ GameObject:
   - component: {fileID: 1446728506}
   - component: {fileID: 1446728505}
   - component: {fileID: 1446728504}
+  - component: {fileID: 1446728507}
   m_Layer: 12
   m_Name: snowHill_left (1)
   m_TagString: GrappleTerrain
@@ -5845,6 +6028,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446728507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446728503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1453125111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +6050,7 @@ GameObject:
   - component: {fileID: 1453125114}
   - component: {fileID: 1453125113}
   - component: {fileID: 1453125112}
+  - component: {fileID: 1453125115}
   m_Layer: 12
   m_Name: snowCorner_left (3)
   m_TagString: GrappleTerrain
@@ -5947,6 +6143,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1453125115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453125111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1465874892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6170,6 +6378,7 @@ GameObject:
   - component: {fileID: 1512887105}
   - component: {fileID: 1512887104}
   - component: {fileID: 1512887103}
+  - component: {fileID: 1512887106}
   m_Layer: 12
   m_Name: snowMid (4)
   m_TagString: GrappleTerrain
@@ -6262,6 +6471,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512887106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512887102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1536481677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6272,6 +6493,7 @@ GameObject:
   - component: {fileID: 1536481680}
   - component: {fileID: 1536481679}
   - component: {fileID: 1536481678}
+  - component: {fileID: 1536481681}
   m_Layer: 12
   m_Name: snowCorner_left
   m_TagString: GrappleTerrain
@@ -6364,6 +6586,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1536481681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536481677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1569476573
 GameObject:
   m_ObjectHideFlags: 0
@@ -7171,6 +7405,7 @@ GameObject:
   - component: {fileID: 1869462745}
   - component: {fileID: 1869462744}
   - component: {fileID: 1869462743}
+  - component: {fileID: 1869462746}
   m_Layer: 12
   m_Name: snowMid (3)
   m_TagString: GrappleTerrain
@@ -7263,6 +7498,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1869462746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869462742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1870424178
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,6 +7724,7 @@ GameObject:
   - component: {fileID: 1888736537}
   - component: {fileID: 1888736536}
   - component: {fileID: 1888736535}
+  - component: {fileID: 1888736538}
   m_Layer: 12
   m_Name: snowMid (7)
   m_TagString: GrappleTerrain
@@ -7569,6 +7817,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888736538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888736534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1906035928
 GameObject:
   m_ObjectHideFlags: 0
@@ -7759,6 +8019,7 @@ GameObject:
   - component: {fileID: 1935888446}
   - component: {fileID: 1935888445}
   - component: {fileID: 1935888444}
+  - component: {fileID: 1935888447}
   m_Layer: 12
   m_Name: snowMid (2)
   m_TagString: GrappleTerrain
@@ -7851,6 +8112,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1935888447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935888443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1942798011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,6 +8202,7 @@ GameObject:
   - component: {fileID: 1942879206}
   - component: {fileID: 1942879205}
   - component: {fileID: 1942879204}
+  - component: {fileID: 1942879207}
   m_Layer: 12
   m_Name: snowMid (6)
   m_TagString: GrappleTerrain
@@ -8021,6 +8295,18 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1942879207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1942879203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0
 --- !u!1 &1943318350
 GameObject:
   m_ObjectHideFlags: 0
@@ -8400,6 +8686,7 @@ GameObject:
   - component: {fileID: 2136964991}
   - component: {fileID: 2136964990}
   - component: {fileID: 2136964989}
+  - component: {fileID: 2136964992}
   m_Layer: 12
   m_Name: snowMid (12)
   m_TagString: GrappleTerrain
@@ -8492,3 +8779,15 @@ Transform:
   m_Father: {fileID: 1740331099}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136964992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136964988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0796748c67733dc4b882401035647c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSlippery: 0

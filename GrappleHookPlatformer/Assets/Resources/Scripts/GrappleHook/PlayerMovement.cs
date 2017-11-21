@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rBody;
     private Animator animator;
     private float jumpInput;
+    private bool isSliding = false;                                             // Used when player is on snow
 
     //Rope Swing ability vars
     public Vector2 ropeHook;
@@ -74,11 +75,10 @@ public class PlayerMovement : MonoBehaviour {
             //animator.SetBool("IsSwinging", false);
             //animator.SetFloat("Speed", 0f);
 
-            //Makes Player Stop horizontaly when not swinging & when no player horizontal input
-            if (!isSwinging) {
+            //Makes Player Stop horizontaly when not swinging/sliding & when no player horizontal input
+            if (!isSwinging && !isSliding) {
                 rBody.velocity = new Vector2(0, rBody.velocity.y);
             }
-
         }
     }
 
@@ -121,12 +121,23 @@ public class PlayerMovement : MonoBehaviour {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++) {
             if (colliders[i].gameObject != gameObject) {
+                CheckIfGroundSlippery(colliders[i].gameObject);
                 animator.SetBool("Ground", true);
                 isPlayerGrounded = true;
                 isJumping = false;
                 return;
             }
         }
+        isSliding = false;
         isPlayerGrounded = false;
+    }
+
+    private void CheckIfGroundSlippery(GameObject groundObject) {
+        TerrainTile terrainScript = groundObject.GetComponent<TerrainTile>();
+        if(terrainScript != null) {
+            isSliding = terrainScript.isSlippery;
+        } else {
+            isSliding = false;
+        }
     }
 }
