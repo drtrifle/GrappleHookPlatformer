@@ -1,6 +1,6 @@
 *Inspiration*
 
-This game is inspired from the grapple hook mechanics in Fianl Ninja.
+This game is inspired from the grapple hook mechanics in Final Ninja.
 
 <img src="http://www.multiplayerhub.com/review/wp-content/uploads/2010/07/finalninja3.jpg" width="506" height="286" />
 
@@ -24,10 +24,7 @@ The aim of this game in any level is to reach the end of the level as fast as po
 
 *Constraints*
 
-The non-placeable tiles and the automatic merging of squares serve as
-constraints in any level. The player will realize that sometimes moves
-that doesn’t combine any squares must be made, because of these
-constraints.
+Player is unable to jump when the grapple hook is deployed. Player is also unable to grapple to certain surfaces
 
 *Story*
 
