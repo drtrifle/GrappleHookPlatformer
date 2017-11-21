@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameMaster
-  - Terrain
   - GrappleObject
+  - GrappleTerrain
   layers:
   - Default
   - TransparentFX
