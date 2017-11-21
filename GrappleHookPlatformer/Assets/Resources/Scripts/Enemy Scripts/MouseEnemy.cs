@@ -40,11 +40,11 @@ public class MouseEnemy : Enemy {
         Debug.DrawLine(transform.position, moveDirection + (Vector2)transform.position, Color.green, 0f);
 
         if (hit && hit.collider.CompareTag("Terrain") ){
-            changeDirection();
+            ChangeDirection();
         }
     }
 
-    private void changeDirection() {
+    private void ChangeDirection() {
         moveDirection *= -1f;
         spriteRenderer.flipX = flipSprite;
         flipSprite = !flipSprite;

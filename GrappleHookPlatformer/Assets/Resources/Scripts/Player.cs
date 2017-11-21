@@ -63,6 +63,7 @@ public class Player : MonoBehaviour {
 
         yield return new WaitForSecondsRealtime(2f);
         spriteBodyRenderer.enabled = true;
+        spriteArmRenderer.enabled = true;
         playerStats.isInvincible = false;
     }
 }
