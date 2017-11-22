@@ -39,7 +39,7 @@ public class MouseEnemy : Enemy {
         hit = Physics2D.Raycast(transform.position, moveDirection, 1f, hitLayers);
         Debug.DrawLine(transform.position, moveDirection + (Vector2)transform.position, Color.green, 0f);
 
-        if (hit && hit.collider.CompareTag("Terrain") ){
+        if (hit && hit.collider.CompareTag("GrappleTerrain") ){
             ChangeDirection();
         }
     }
