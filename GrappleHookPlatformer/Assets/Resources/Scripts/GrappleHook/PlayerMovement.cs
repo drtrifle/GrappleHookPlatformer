@@ -128,7 +128,6 @@ public class PlayerMovement : MonoBehaviour {
                 return;
             }
         }
-        isSliding = false;
         isPlayerGrounded = false;
     }
 
@@ -139,5 +138,9 @@ public class PlayerMovement : MonoBehaviour {
         } else {
             isSliding = false;
         }
+    }
+
+    public void SetSwinging(bool isSwinging) {
+        this.isSwinging = isSwinging;
     }
 }

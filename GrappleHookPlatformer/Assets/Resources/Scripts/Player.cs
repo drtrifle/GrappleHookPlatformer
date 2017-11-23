@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Manages Player Health & Invinciblity Frames
 public class Player : MonoBehaviour {
 
     [System.Serializable]
