@@ -365,6 +365,12 @@ public class RopeSystem : MonoBehaviour {
         } else if (Input.GetAxis("Vertical") < 0f && ropeAttached) {
             ropeJoint.distance += Time.deltaTime * climbSpeed;
         }
+
+        //Detach rope & boost player up if rope distance is too short
+        if(ropeAttached && ropeJoint.distance <= 0.5f) {
+            transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 15f), ForceMode2D.Impulse);
+            ResetRope();
+        }
     }
 
     #region Collision Checking Methods
