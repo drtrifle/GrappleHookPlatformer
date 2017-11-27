@@ -26,6 +26,9 @@ public class LaserTurretEnemy : Enemy {
     // Use this for initialization
     void Start () {
 
+        animator = GetComponent<Animator>();
+        projectilePool = GameObject.Find("ProjectilePool").transform;
+
         switch (turretType) {
             case TurretType.Beam:
                 StartCoroutine("FireProjectileSequence");
@@ -33,10 +36,7 @@ public class LaserTurretEnemy : Enemy {
             case TurretType.Stream:
                 SetUpLaserStream();
                 break;
-        }
-
-        animator = GetComponent<Animator>();
-        projectilePool = GameObject.Find("ProjectilePool").transform;
+        }   
     }
 
     //Don't damage player on contact
