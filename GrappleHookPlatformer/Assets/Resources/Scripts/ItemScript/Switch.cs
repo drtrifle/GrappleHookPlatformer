@@ -6,7 +6,7 @@ public class Switch : MonoBehaviour {
 
     public bool startOn;
 
-    private bool isOn;
+    public bool isOn;
     private bool isTriggered;
 
 	// Use this for initialization
@@ -30,7 +30,7 @@ public class Switch : MonoBehaviour {
     }
 
     //If button is On, return true, else false
-    public bool getOnState() {
+    public bool GetOnState() {
         return isOn;
     }
 }

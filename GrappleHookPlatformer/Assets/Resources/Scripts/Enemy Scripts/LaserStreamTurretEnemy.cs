@@ -12,6 +12,11 @@ public class LaserStreamTurretEnemy : Enemy {
     public GameObject projectilePrefab;
     public LayerMask hitLayers;
     public List<GameObject> laserStreamList;
+    private bool isStreamSetUp = false;
+
+    //Switch
+    public bool isSwitchControlled;
+    public Switch switchScript;
 
     // Use this for initialization
     void Start () {
@@ -19,9 +24,18 @@ public class LaserStreamTurretEnemy : Enemy {
         SetUpLaserStream();
     }
 
-    //Don't damage player on contact
+    void Update() {
+        if (isSwitchControlled) {
+            if (!switchScript.GetOnState() && !isStreamSetUp) {
+                ActivateLaserStream();
+            }else if(switchScript.GetOnState() && isStreamSetUp) {
+                InactivateLaserStream();
+            }
+        }  
+    }
+
     protected override void OnCollisionEnter2D(Collision2D collision) {
-        
+        //Don't damage player on contact
     }
 
     void SetUpLaserStream() {
@@ -38,6 +52,25 @@ public class LaserStreamTurretEnemy : Enemy {
                 laserStreamList.Add(clone);
             }
         }
+
+        isStreamSetUp = true;
     }
+
+    void ActivateLaserStream() {
+        foreach(GameObject laserStream in laserStreamList) {
+            laserStream.SetActive(true);
+        }
+
+        isStreamSetUp = true;
+    }
+
+    void InactivateLaserStream() {
+        foreach (GameObject laserStream in laserStreamList) {
+            laserStream.SetActive(false);
+        }
+
+        isStreamSetUp = false;
+    }
+
 
 }
