@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ebb43805d89841c439603e7902a7a92e
-timeCreated: 1511855654
+guid: 35d00b4761726da48aa844f44117bb98
+timeCreated: 1511859050
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bridgeA_0
+    21300000: Fulcrum_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -32,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -41,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 82, z: 86, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 128
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -93,33 +93,30 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Tizen
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bridgeA_0
+      name: Fulcrum_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 82
-        width: 42
-        height: 46
+        y: 0
+        width: 124
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
-    outline: []
+    outline:
+    - - {x: -64, y: -59}
+      - {x: -58, y: -64}
+      - {x: 62, y: -64}
+      - {x: 62, y: -60}
+      - {x: -60, y: 62}
+      - {x: -64, y: 62}
     physicsShape: []
   spritePackingTag: 
   userData: 
