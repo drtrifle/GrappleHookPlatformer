@@ -8,7 +8,7 @@ public class FrogEnemy : Enemy {
 
     //Frog Movement Vars
     private Rigidbody2D rb2d;
-    private Vector2 moveDirection;
+    private Vector2 jumpDirection;
     public float jumpSpeed = 1f;
     public float jumpInterval;
 
@@ -17,7 +17,7 @@ public class FrogEnemy : Enemy {
 
     // Use this for initialization
     void Start () {
-        moveDirection = -transform.right;
+        jumpDirection = new Vector2(-1, 1.75f);
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         StartCoroutine("JumpSequence");
@@ -32,7 +32,7 @@ public class FrogEnemy : Enemy {
 
     private void Jump() {
         animator.SetTrigger("isJumping");
-        Vector2 velocity = new Vector2(-1, 1.5f) * jumpSpeed;
+        Vector2 velocity = jumpDirection * jumpSpeed;
         rb2d.AddRelativeForce(velocity);
     }
 }

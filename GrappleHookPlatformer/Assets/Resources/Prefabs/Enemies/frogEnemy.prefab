@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50917002298035150}
   m_Layer: 13
   m_Name: frogEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 1673931752195740}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b501b61603ccf96479fa226531296808, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a9656a2a81ccb4b95c4901eee1eb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 350
+  jumpSpeed: 300
   jumpInterval: 3
 --- !u!212 &212067813246655174
 SpriteRenderer:

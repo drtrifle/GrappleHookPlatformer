@@ -17,4 +17,8 @@ public class Enemy : MonoBehaviour {
             player.DamagePlayer(1);
         }
     }
+
+    public virtual void KillSelf() {
+        Destroy(gameObject);
+    }
 }

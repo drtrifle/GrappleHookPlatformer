@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour {
 
@@ -21,6 +22,10 @@ public class GameMaster : MonoBehaviour {
     //Vars for playerHealth
     private int playerHealth = 3;
     public HealthUIContainer healthUIScript;
+
+    //Vars for playerCoins
+    private int playerCoins = 0;
+    public Text playerCoinText;
 
     private void Start() {
         if (gameMaster == null) {
@@ -62,7 +67,16 @@ public class GameMaster : MonoBehaviour {
 
     }
 
-    public void WinLevel() {
+    public static void AddCoins(int value) {
+        GameMaster gm = GameMaster.gameMaster;
+        gm.playerCoins += value;
+
+        //Update Coin UI
+        gm.playerCoinText.text = "Coins: " + gm.playerCoins.ToString("D3");
+    }
+
+
+        public void WinLevel() {
         levelClearedText.SetActive(true);
         timerText.StopTimer();
     }

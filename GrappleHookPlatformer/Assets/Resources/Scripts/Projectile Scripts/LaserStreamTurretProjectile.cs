@@ -13,13 +13,23 @@ public class LaserStreamTurretProjectile : Projectile {
         if (collider.CompareTag("Player")) {
             Player player = collider.gameObject.GetComponent<Player>();
             player.DamagePlayer(1);
-        } 
+        }
+
+        if (collider.gameObject.CompareTag("Enemy")) {
+            Enemy enemyScript = collider.gameObject.GetComponent<Enemy>();
+            enemyScript.KillSelf();
+        }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             Player player = collision.gameObject.GetComponent<Player>();
             player.DamagePlayer(1);
-        } 
+        }
+
+        if (collision.gameObject.CompareTag("Enemy")) {
+            Enemy enemyScript = collision.gameObject.GetComponent<Enemy>();
+            enemyScript.KillSelf();
+        }
     }
 }
