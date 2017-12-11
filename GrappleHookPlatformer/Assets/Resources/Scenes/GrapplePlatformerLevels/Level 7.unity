@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &47570431
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &60880473
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -644,6 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &110641909
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -894,6 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &223402777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &310948645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &310948648
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1459,6 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &325668820
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1759,6 +1766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &364075513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &425755535
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2821,6 +2830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &493845850
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3014,6 +3024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &506820669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &513760004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,7 +3244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330355038}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &532855550
 GameObject:
@@ -3321,6 +3333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &532855554
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3465,6 +3478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &586406063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3952,53 +3966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
---- !u!1001 &641202131
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1330355038}
-    m_Modifications:
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 20c7ff6f3edba91488163f952e328412, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &641202132 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4184779383325110, guid: 20c7ff6f3edba91488163f952e328412,
-    type: 2}
-  m_PrefabInternal: {fileID: 641202131}
+  isMovingPlatform: 0
 --- !u!1 &642501439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,6 +4010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &642501442
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4449,7 +4418,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740787134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 163.90292, z: 0}
+  m_LocalPosition: {x: 0, y: 164.21863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1127379414}
@@ -4581,7 +4550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330355038}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &761779675
 Prefab:
@@ -4673,6 +4642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &767689579
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4884,7 +4854,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330355038}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811476259
 GameObject:
@@ -4909,7 +4879,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811476259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 168.90292, z: 0}
+  m_LocalPosition: {x: -400, y: 169.21863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 208580824}
@@ -5509,6 +5479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &972734646
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5728,6 +5699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1051807189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6036,6 +6008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1117472799
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6230,7 +6203,7 @@ Prefab:
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 267.5
+      value: 268
       objectReference: {fileID: 0}
     - target: {fileID: 224716355094237446, guid: 31b476f79115dcd42b8bc0d92753d9ad,
         type: 2}
@@ -6372,6 +6345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1139123226
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6492,6 +6466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1153051809
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6741,6 +6716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1244106883
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6862,6 +6838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1269872377
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7005,7 +6982,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330355038}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1330355037
 GameObject:
@@ -7033,7 +7010,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1465874894}
-  - {fileID: 641202132}
   - {fileID: 2093039966}
   - {fileID: 798463155}
   - {fileID: 1773496187}
@@ -7086,6 +7062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1337533884
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7334,6 +7311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1355055269
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7557,6 +7535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1403073554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7673,6 +7652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1406181370
 GameObject:
   m_ObjectHideFlags: 0
@@ -7920,6 +7900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1424160094
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8240,6 +8221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1453125111
 GameObject:
   m_ObjectHideFlags: 0
@@ -8355,6 +8337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1465874892
 GameObject:
   m_ObjectHideFlags: 0
@@ -8683,6 +8666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1542070049
 GameObject:
   m_ObjectHideFlags: 0
@@ -8726,6 +8710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1542070052
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8891,6 +8876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1542131981
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9434,6 +9420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1706847919
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9554,6 +9541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1724286301
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9747,7 +9735,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330355038}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779223713
 GameObject:
@@ -10130,6 +10118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &1851024235
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10323,6 +10312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1870424178
 GameObject:
   m_ObjectHideFlags: 0
@@ -10642,6 +10632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1906035928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10792,7 +10783,7 @@ Prefab:
         type: 2}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 641202132}
+      objectReference: {fileID: 0}
     - target: {fileID: 114728348635653792, guid: 1071bdb9b21a8484395b287f33116a69,
         type: 2}
       propertyPath: spawnPrefab
@@ -10818,6 +10809,58 @@ Prefab:
         type: 2}
       propertyPath: m_Volume
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 224807267707271006, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224807267707271006, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 633.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224807267707271006, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086504358057572, guid: 1071bdb9b21a8484395b287f33116a69, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224033475572778598, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 224033475572778598, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 903.937
+      objectReference: {fileID: 0}
+    - target: {fileID: 224799273475418604, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 224799273475418604, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 893.937
+      objectReference: {fileID: 0}
+    - target: {fileID: 224928695436863418, guid: 1071bdb9b21a8484395b287f33116a69,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 898.937
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086504358057572, guid: 1071bdb9b21a8484395b287f33116a69, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086504358057572, guid: 1071bdb9b21a8484395b287f33116a69, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1071bdb9b21a8484395b287f33116a69, type: 2}
@@ -10937,6 +10980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!1 &1942798011
 GameObject:
   m_ObjectHideFlags: 0
@@ -11341,6 +11385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSlippery: 0
+  isMovingPlatform: 0
 --- !u!60 &2063642469
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -11490,7 +11535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330355038}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097281970 stripped
 GameObject:
