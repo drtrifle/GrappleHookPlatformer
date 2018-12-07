@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
+  m_Name: CoinBrush
+  m_EditorClassIdentifier: 
+  m_Prefabs:
+  - {fileID: 1359837405166154, guid: 3692856947edf434c8ddc941a4f79d81, type: 2}
+  - {fileID: 1826902933104218, guid: 84a79be08eba2ac4092eeff94c2f1c51, type: 2}
+  - {fileID: 1941973484029228, guid: 12b3daf4d05b3294ea06ce68eeac5c06, type: 2}
+  m_PerlinScale: 0.5
+  m_Z: 0
